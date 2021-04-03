@@ -1,0 +1,89 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (4e10bdfb).
+//
+// SetGetServer.tlh
+//
+// C++ source equivalent of Win32 type library ..\SetGetServer\SetGetServer.tlb
+// compiler-generated file created 04/30/07 at 19:05:45 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct /* coclass */ SetGet;
+struct __declspec(uuid("a81347a8-c8e2-46bf-9339-66d995218147"))
+/* interface */ ISetGet;
+struct __declspec(uuid("06951608-ca64-44ca-a405-4da467f6e4a9"))
+/* interface */ IAddSub;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(ISetGet, __uuidof(ISetGet));
+_COM_SMARTPTR_TYPEDEF(IAddSub, __uuidof(IAddSub));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("457b1293-605c-4616-b4b5-985aa1e3cd2e"))
+SetGet;
+    // [ default ] interface ISetGet
+    // interface IAddSub
+
+struct __declspec(uuid("a81347a8-c8e2-46bf-9339-66d995218147"))
+ISetGet : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Set (
+        int setData );
+    HRESULT Get (
+        int * getData );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Set (
+        int setData ) = 0;
+    virtual HRESULT __stdcall raw_Get (
+        int * getData ) = 0;
+};
+
+struct __declspec(uuid("06951608-ca64-44ca-a405-4da467f6e4a9"))
+IAddSub : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Add (
+        int addend );
+    HRESULT Sub (
+        int subtrahend );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Add (
+        int addend ) = 0;
+    virtual HRESULT __stdcall raw_Sub (
+        int subtrahend ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "SetGetServer.tli"
+
+#pragma pack(pop)

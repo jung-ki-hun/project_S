@@ -1,0 +1,41 @@
+﻿빌드 시작: 2018-05-10 오전 11:16:57
+     1>2 노드의 "C:\Users\student\Documents\Visual Studio 2013\Projects\AddServer\AddServer.vcxproj" 프로젝트(Build 대상)입니다.
+     1>Midl:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\midl.exe /D _DEBUG /mktyplib203 /W1 /nologo /char signed /env win32 /Oicf /h "AddServer_i.h" /iid "AddServer_i.c" /proxy "AddServer_p.c" /tlb "Debug\AddServer.tlb" /robust AddServer.idl 
+         Processing .\AddServer.idl
+         AddServer.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\oaidl.idl
+         oaidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\objidl.idl
+         objidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\unknwn.idl
+         unknwn.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\wtypes.idl
+         wtypes.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\wtypesbase.idl
+         wtypesbase.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h
+         basetsd.h
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\guiddef.h
+         guiddef.h
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\ocidl.idl
+         ocidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\oleidl.idl
+         oleidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\servprov.idl
+         servprov.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\urlmon.idl
+         urlmon.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\msxml.idl
+         msxml.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\oaidl.acf
+         oaidl.acf
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\ocidl.acf
+         ocidl.acf
+     1>.\AddServer.idl(15): error MIDL2311: statements outside library block are illegal in mktyplib compatability mode : [ Interface 'IAdd'  ]
+     1>.\AddServer.idl(15): error MIDL2096: duplicated attribute : [uuid] [ Interface 'IAdd'  ]
+     1>"C:\Users\student\Documents\Visual Studio 2013\Projects\AddServer\AddServer.vcxproj" 프로젝트를 빌드했습니다(Build 대상). - 실패
+
+빌드하지 못했습니다.
+
+경과 시간: 00:00:00.84

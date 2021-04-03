@@ -1,0 +1,25 @@
+HKCR
+{
+	ATLSansuServer.ATLSansu.1 = s 'ATLSansu Class'
+	{
+		CLSID = s '{B421DCB2-9201-4675-ABC7-E276D6D043CC}'
+	}
+	ATLSansuServer.ATLSansu = s 'ATLSansu Class'
+	{
+		CLSID = s '{B421DCB2-9201-4675-ABC7-E276D6D043CC}'
+		CurVer = s 'ATLSansuServer.ATLSansu.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B421DCB2-9201-4675-ABC7-E276D6D043CC} = s 'ATLSansu Class'
+		{
+			ProgID = s 'ATLSansuServer.ATLSansu.1'
+			VersionIndependentProgID = s 'ATLSansuServer.ATLSansu'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{716D4C73-70E1-4B4C-9554-8D8776686F6D}'
+		}
+	}
+}

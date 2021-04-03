@@ -1,0 +1,102 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (7633abae).
+//
+// AddBack.tlh
+//
+// C++ source equivalent of Win32 type library ..\AddBack.Con\AddBack.tlb
+// compiler-generated file created 06/04/08 at 10:57:06 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct /* coclass */ AddBack;
+struct __declspec(uuid("e3f3cf64-923c-4414-8a1d-b0c322f3010b"))
+/* dual interface */ IAddBack;
+struct __declspec(uuid("9c40083f-1d1c-4403-95bb-94c73055357e"))
+/* dual interface */ IAddEnd;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAddBack, __uuidof(IAddBack));
+_COM_SMARTPTR_TYPEDEF(IAddEnd, __uuidof(IAddEnd));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("ccb972c9-c400-4ecb-812c-fbc7bafd4927"))
+AddBack;
+    // [ default ] interface IAddBack
+    // interface IAddEnd
+
+struct __declspec(uuid("e3f3cf64-923c-4414-8a1d-b0c322f3010b"))
+IAddBack : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Add ( );
+    HRESULT AddTen ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Add ( ) = 0;
+    virtual HRESULT __stdcall raw_AddTen ( ) = 0;
+};
+
+struct __declspec(uuid("9c40083f-1d1c-4403-95bb-94c73055357e"))
+IAddEnd : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAddEnd,put=PutAddEnd))
+    short AddEnd;
+    __declspec(property(get=GetSum,put=PutSum))
+    short Sum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Clear ( );
+    short GetAddEnd ( );
+    void PutAddEnd (
+        short pVal );
+    short GetSum ( );
+    void PutSum (
+        short pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Clear ( ) = 0;
+    virtual HRESULT __stdcall get_AddEnd (
+        short * pVal ) = 0;
+    virtual HRESULT __stdcall put_AddEnd (
+        short pVal ) = 0;
+    virtual HRESULT __stdcall get_Sum (
+        short * pVal ) = 0;
+    virtual HRESULT __stdcall put_Sum (
+        short pVal ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "AddBack.tli"
+
+#pragma pack(pop)

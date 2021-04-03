@@ -1,0 +1,25 @@
+HKCR
+{
+	AddServer.Add.1 = s 'Add Class'
+	{
+		CLSID = s '{33D61ACF-7482-48A3-97F2-FD8502A817D3}'
+	}
+	AddServer.Add = s 'Add Class'
+	{		
+		CurVer = s 'AddServer.Add.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {33D61ACF-7482-48A3-97F2-FD8502A817D3} = s 'Add Class'
+		{
+			ProgID = s 'AddServer.Add.1'
+			VersionIndependentProgID = s 'AddServer.Add'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{88987342-71EF-4CBC-AD4C-73975D1D833E}'
+			Version = s '1.0'
+		}
+	}
+}

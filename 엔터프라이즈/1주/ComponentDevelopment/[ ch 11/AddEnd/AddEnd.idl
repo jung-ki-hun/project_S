@@ -1,0 +1,43 @@
+// AddEnd.idl : IDL source for AddEnd.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AddEnd.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(9C40083F-1D1C-4403-95BB-94C73055357E),
+		dual,
+		helpstring("IAddEnd Interface"),
+		pointer_default(unique)
+	]
+	interface IAddEnd : IDispatch
+	{
+		[id(1), helpstring("method Clear")] HRESULT Clear();
+		[propget, id(2), helpstring("property AddEnd")] HRESULT AddEnd([out, retval] short *pVal);
+		[propput, id(2), helpstring("property AddEnd")] HRESULT AddEnd([in] short newVal);
+		[propget, id(3), helpstring("property Sum")] HRESULT Sum([out, retval] short *pVal);
+		[propput, id(3), helpstring("property Sum")] HRESULT Sum([in] short newVal);
+	};
+
+[
+	uuid(DFE393E7-00ED-4C28-9D5C-CECBD4DC6B95),
+	version(1.0),
+	helpstring("AddEnd 1.0 Type Library")
+]
+library ADDENDLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(33EB3867-9BBD-4439-892B-AC02C8629161),
+		helpstring("AddEnd Class")
+	]
+	coclass AddEnd
+	{
+		[default] interface IAddEnd;
+	};
+};

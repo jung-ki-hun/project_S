@@ -1,0 +1,23 @@
+; Sample INF file for Shape.DLL
+[version] 
+; version signature (same for both NT and Win95) do not remove
+signature="$CHICAGO$"
+AdvancedINF=2.0  
+
+[Add.Code]
+Shape.dll=Shape.dll
+atl.dll=atl.dll
+
+; needed DLL
+[atl.dll]
+file-win32-x86=thiscab
+FileVersion=2,00,0,7024
+DestDir=11
+RegisterServer=yes 
+
+[Shape.dll]
+file-win32-x86=thiscab
+clsid={82333237-5AFB-4413-86A3-BC4250708295} 
+FileVersion=1,0,0,1 
+RegisterServer=yes  
+; end of INF file

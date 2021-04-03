@@ -1,0 +1,96 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 12.00.21005.1 (ea58612b).
+//
+// c:\users\student\desktop\외부실험용\classlibrary1\cplusplus\debug\classlibrary1.tlh
+//
+// C++ source equivalent of Win32 type library ..\ClassLibrary1\bin\Debug\ClassLibrary1.tlb
+// compiler-generated file created 06/18/19 at 08:56:34 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace ClassLibrary1 {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("57ac3105-c743-4540-aef4-408a0d7852e1"))
+/* LIBID */ __ClassLibrary1;
+struct __declspec(uuid("19cecfda-5f74-4ef7-84cf-4c0d007de875"))
+/* dual interface */ Interface1;
+struct /* coclass */ Class1;
+struct __declspec(uuid("248c8025-a7b5-3b66-a7e1-a22b0ff7d201"))
+/* dual interface */ IMyContract;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(Interface1, __uuidof(Interface1));
+_COM_SMARTPTR_TYPEDEF(IMyContract, __uuidof(IMyContract));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("19cecfda-5f74-4ef7-84cf-4c0d007de875"))
+Interface1 : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long add (
+        long a,
+        long b );
+    _bstr_t text (
+        _bstr_t name );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_add (
+        /*[in]*/ long a,
+        /*[in]*/ long b,
+        /*[out,retval]*/ long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_text (
+        /*[in]*/ BSTR name,
+        /*[out,retval]*/ BSTR * pRetVal ) = 0;
+};
+
+struct __declspec(uuid("68956552-d481-426d-accc-50f15e5d8bc9"))
+Class1;
+    // interface _Object
+    // [ default ] interface Interface1
+
+struct __declspec(uuid("248c8025-a7b5-3b66-a7e1-a22b0ff7d201"))
+IMyContract : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t Hello (
+        _bstr_t name );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Hello (
+        /*[in]*/ BSTR name,
+        /*[out,retval]*/ BSTR * pRetVal ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\users\student\desktop\외부실험용\classlibrary1\cplusplus\debug\classlibrary1.tli"
+
+} // namespace ClassLibrary1
+
+#pragma pack(pop)

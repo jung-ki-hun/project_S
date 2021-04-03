@@ -1,0 +1,27 @@
+*.pdf
+*.exe
+*.h
+*.dsp
+*.ncb
+*.dsw
+*.opt
+*.plg
+*.asm
+*.obj
+*.ASM
+*.vsd
+*.vcxproj
+*.vcproj
+*.vcxproj.filters
+*.htm
+*.html
+*.jpg
+*.gif
+*.def
+*.sln
+*.java
+*.conf
+*.sql
+/공모전/
+/종합설계/프로그램 데이터/
+/미래사회/

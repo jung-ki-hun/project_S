@@ -1,0 +1,26 @@
+HKCR
+{
+	AddEnd.AddEnd.1 = s 'AddEnd Class'
+	{
+		CLSID = s '{33EB3867-9BBD-4439-892B-AC02C8629161}'
+	}
+	AddEnd.AddEnd = s 'AddEnd Class'
+	{
+		CLSID = s '{33EB3867-9BBD-4439-892B-AC02C8629161}'
+		CurVer = s 'AddEnd.AddEnd.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {33EB3867-9BBD-4439-892B-AC02C8629161} = s 'AddEnd Class'
+		{
+			ProgID = s 'AddEnd.AddEnd.1'
+			VersionIndependentProgID = s 'AddEnd.AddEnd'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{DFE393E7-00ED-4C28-9D5C-CECBD4DC6B95}'
+		}
+	}
+}

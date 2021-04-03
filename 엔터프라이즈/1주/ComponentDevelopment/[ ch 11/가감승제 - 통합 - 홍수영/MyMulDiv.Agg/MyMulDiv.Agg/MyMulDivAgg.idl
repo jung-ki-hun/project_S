@@ -1,0 +1,38 @@
+// MyMulDivAgg.idl : MyMulDiv.Agg의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(MyMulDivAgg.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(B79B6182-BFA9-433D-8CC5-48BCDD49956D),
+	dual,
+	nonextensible,
+	helpstring("IMyMulDiv 인터페이스"),
+	pointer_default(unique)
+]
+interface IMyMulDiv : IDispatch{
+    [id(1), helpstring("메서드 Mul")] HRESULT Mul([in] short val1, [in] short val2, [out] short * result);
+    [id(2), helpstring("메서드 Div")] HRESULT Div([in] short val1, [in] short val2, [out] short * result);
+};
+[
+	uuid(21034A56-C4F2-48F7-91F8-63AFA5ADFE8C),
+	version(1.0),
+	helpstring("MyMulDivAgg 1.0 형식 라이브러리")
+]
+library MyMulDivAggLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(11463DE9-546D-444D-AA59-497D114C02DD),
+		helpstring("MyMulDiv Class")
+	]
+	coclass MyMulDiv
+	{
+		[default] interface IMyMulDiv;
+	};
+};

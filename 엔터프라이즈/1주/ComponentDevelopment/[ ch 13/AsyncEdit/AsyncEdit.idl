@@ -1,0 +1,54 @@
+// AsyncEdit.idl : IDL source for AsyncEdit.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AsyncEdit.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(996706ED-350D-11D4-8255-0000C0B11065),
+		dual,
+		helpstring("IAsyncEdit Interface"),
+		pointer_default(unique)
+	]
+	interface IAsyncEdit : IDispatch
+	{
+		[propget, id(1), helpstring("property UrlPath")] HRESULT UrlPath([out, retval] BSTR *pVal);
+		[propput, id(1), helpstring("property UrlPath")] HRESULT UrlPath([in] BSTR newVal);
+	};
+
+[
+	uuid(996706E1-350D-11D4-8255-0000C0B11065),
+	version(1.0),
+	helpstring("AsyncEdit 1.0 Type Library")
+]
+library ASYNCEDITLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(996706EF-350D-11D4-8255-0000C0B11065),
+		helpstring("_IAsyncEditEvents Interface")
+	]
+	dispinterface _IAsyncEditEvents
+	{
+		properties:
+		methods:
+	};
+
+	[
+		uuid(996706EE-350D-11D4-8255-0000C0B11065),
+		helpstring("AsyncEdit Class")
+	]
+	coclass AsyncEdit
+	{
+		[default] interface IAsyncEdit;
+		[default, source] dispinterface _IAsyncEditEvents;
+	};
+};

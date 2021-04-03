@@ -1,0 +1,61 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (7d795e03).
+//
+// HelloServer.tlh
+//
+// C++ source equivalent of Win32 type library ..\HelloServer\HelloServer.tlb
+// compiler-generated file created 05/07/06 at 11:56:08 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct /* coclass */ Hello;
+struct __declspec(uuid("52daec03-09b5-456a-9370-fd034d478229"))
+/* interface */ IHello;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IHello, __uuidof(IHello));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("b23344a1-9b60-4c9e-ba39-4b97bd35a101"))
+Hello;
+    // [ default ] interface IHello
+
+struct __declspec(uuid("52daec03-09b5-456a-9370-fd034d478229"))
+IHello : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT sayHello (
+        unsigned short * name,
+        unsigned short * * message );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_sayHello (
+        unsigned short * name,
+        unsigned short * * message ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "HelloServer.tli"
+
+#pragma pack(pop)

@@ -1,0 +1,65 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 12.00.21005.1 (fbc962de).
+//
+// c:\temp\iatlsansu-2015년\atlsansuclient\atlsansuclient\debug\atlsansuserver.tlh
+//
+// C++ source equivalent of Win32 type library C:\Temp\IATLSansu-2015년\ATLSansuServer\ATLSansuServer\Debug\ATLSansuServer.tlb
+// compiler-generated file created 05/10/18 at 17:02:40 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("716d4c73-70e1-4b4c-9554-8d8776686f6d"))
+/* LIBID */ __ATLSansuServerLib;
+struct /* coclass */ ATLSansu;
+struct __declspec(uuid("ae0b93a3-6c06-4ffb-9b0b-eef932e26f9b"))
+/* interface */ IATLSansu;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IATLSansu, __uuidof(IATLSansu));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("b421dcb2-9201-4675-abc7-e276d6d043cc"))
+ATLSansu;
+    // [ default ] interface IATLSansu
+
+struct __declspec(uuid("ae0b93a3-6c06-4ffb-9b0b-eef932e26f9b"))
+IATLSansu : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SansuAdd (
+        int a,
+        int b,
+        int * c );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SansuAdd (
+        /*[in]*/ int a,
+        /*[in]*/ int b,
+        /*[out]*/ int * c ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\temp\iatlsansu-2015년\atlsansuclient\atlsansuclient\debug\atlsansuserver.tli"
+
+#pragma pack(pop)

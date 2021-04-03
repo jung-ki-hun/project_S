@@ -1,0 +1,141 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (58c53aa5).
+//
+// Company.tlh
+//
+// C++ source equivalent of Win32 type library ..\Company\Company.tlb
+// compiler-generated file created 06/28/06 at 20:15:26 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("a9469c63-95f4-4f5a-9723-3faa8866bb1b"))
+/* dual interface */ IEmployees;
+struct __declspec(uuid("1e5edac6-7b4c-4cb7-a6ac-79393cb466c6"))
+/* dual interface */ IEmployee;
+struct /* coclass */ Company;
+struct __declspec(uuid("eca4926a-d50f-4988-b438-92ce9620e04f"))
+/* dual interface */ ICompany;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IEmployees, __uuidof(IEmployees));
+_COM_SMARTPTR_TYPEDEF(IEmployee, __uuidof(IEmployee));
+_COM_SMARTPTR_TYPEDEF(ICompany, __uuidof(ICompany));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("a9469c63-95f4-4f5a-9723-3faa8866bb1b"))
+IEmployees : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    _variant_t Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    _variant_t GetItem (
+        long index );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Count (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_Item (
+        long index,
+        VARIANT * pVal ) = 0;
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * pVal ) = 0;
+};
+
+struct __declspec(uuid("1e5edac6-7b4c-4cb7-a6ac-79393cb466c6"))
+IEmployee : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetAddress))
+    _bstr_t Address;
+    __declspec(property(get=GetTelephone))
+    _bstr_t Telephone;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    _bstr_t GetAddress ( );
+    _bstr_t GetTelephone ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Name (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_Address (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_Telephone (
+        BSTR * pVal ) = 0;
+};
+
+struct __declspec(uuid("77ee056d-5ba1-477d-9adf-d0406eb0db77"))
+Company;
+    // [ default ] interface ICompany
+
+struct __declspec(uuid("eca4926a-d50f-4988-b438-92ce9620e04f"))
+ICompany : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetEmployees))
+    _variant_t Employees;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetEmployees ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Employees (
+        VARIANT * pVal ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "Company.tli"
+
+#pragma pack(pop)

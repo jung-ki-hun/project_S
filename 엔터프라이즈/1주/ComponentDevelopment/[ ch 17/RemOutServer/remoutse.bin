@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{B86BF922-CF3C-11D1-94F0-0020AF715AF0} = s 'RemOutServer'
+		'RemOutServer.EXE'
+		{
+			val AppID = s {B86BF922-CF3C-11D1-94F0-0020AF715AF0}
+		}
+	}
+}

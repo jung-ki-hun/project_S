@@ -1,0 +1,40 @@
+// MyExploerToolBar.idl : IDL source for MyExploerToolBar.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (MyExploerToolBar.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+	[
+		object,
+		uuid(1B6F95EC-AC2C-45E9-B49E-3E114D6D8738),
+		dual,
+		helpstring("IStockBar Interface"),
+		pointer_default(unique)
+	]
+	interface IStockBar : IDispatch
+	{
+	};
+
+[
+	uuid(992A0485-B5DB-4472-B0A4-B24B51DDF442),
+	version(1.0),
+	helpstring("MyExploerToolBar 1.0 Type Library")
+]
+library MYEXPLOERTOOLBARLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	[
+		uuid(3B816FC2-D656-4D8C-B287-5634C42AD088),
+		helpstring("StockBar Class")
+	]
+	coclass StockBar
+	{
+		[default] interface IStockBar;
+	};
+};

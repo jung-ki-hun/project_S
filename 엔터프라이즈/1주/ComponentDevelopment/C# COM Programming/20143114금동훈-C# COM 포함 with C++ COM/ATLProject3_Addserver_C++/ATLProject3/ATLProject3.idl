@@ -1,0 +1,35 @@
+// ATLProject3.idl : ATLProject3의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(ATLProject3.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(C438105D-9177-466F-B536-F4DAAE12E497),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IAdd : IDispatch{
+	[id(1)] HRESULT Add([in] int a, [in] int b, [out] int* c);
+};
+[
+	uuid(199BFEA3-9FC1-4D28-AD0D-CBB610264115),
+	version(1.0),
+]
+library ATLProject3Lib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(188CB8F6-67DB-41A2-9464-72C597166042)		
+	]
+	coclass Add
+	{
+		[default] interface IAdd;
+	};
+};
+

@@ -1,0 +1,42 @@
+// skkClient.odl : type library source for skkClient.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (skkClient.tlb).
+
+[ uuid(6D22CFB3-383D-4D1D-8E52-BF25C9D4E305), version(1.0) ]
+library SkkClient
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CSkkClientDoc
+	
+	[ uuid(D7BF3501-F937-4B5B-9FC5-017F88D37B6D) ]
+	dispinterface ISkkClient
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CSkkClientDlgAutoProxy)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CSkkClientDlgAutoProxy)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CSkkClientDoc
+	
+	[ uuid(2294EE58-38B5-4F46-AA79-C3C2700BE21C) ]
+	coclass SkkClient
+	{
+		[default] dispinterface ISkkClient;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

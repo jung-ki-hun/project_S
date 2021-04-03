@@ -1,0 +1,40 @@
+// HelloServer.idl : IDL source for HelloServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (HelloServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	
+	[
+		object,
+		uuid(52DAEC03-09B5-456A-9370-FD034D478229),
+		helpstring("IHello Interface"),
+		pointer_default(unique)
+	]
+	interface IHello : IUnknown
+	{
+		[helpstring("method sayHello")] HRESULT sayHello(unsigned short *name, unsigned short **message);
+	};
+
+[
+	uuid(827F9D25-FB07-4294-AA17-FC267E8BCE1E),
+	version(1.0),
+	helpstring("HelloServer 1.0 Type Library")
+]
+library HELLOSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+	[
+		uuid(B23344A1-9B60-4C9E-BA39-4B97BD35A101),
+		helpstring("Hello Class")
+	]
+	coclass Hello
+	{
+		[default] interface IHello;
+	};
+};

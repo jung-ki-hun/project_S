@@ -1,0 +1,60 @@
+// RemOutServer.idl : IDL source for RemOutServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RemOutServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	
+	[
+		object,
+		uuid(B86BF92E-CF3C-11D1-94F0-0020AF715AF0),
+		dual,
+		helpstring("IAddEnd Interface"),
+		pointer_default(unique)
+	]
+	interface IAddEnd : IDispatch
+	{
+		[propget, id(1), helpstring("property AddEnd")] HRESULT AddEnd([out, retval] short *pVal);
+		[propput, id(1), helpstring("property AddEnd")] HRESULT AddEnd([in] short newVal);
+		[propget, id(2), helpstring("property Sum")] HRESULT Sum([out, retval] short *pVal);
+		[id(3), helpstring("method Clear")] HRESULT Clear();
+	};
+
+	[
+		object,
+		uuid(B86BF92F-CF3C-11D1-94F0-0020AF715AF0),
+		dual,
+		helpstring("IAdd Interface"),
+		pointer_default(unique)
+	]
+	interface IAdd : IDispatch
+	{
+		[id(1), helpstring("method Add")] HRESULT Add();
+		[id(2), helpstring("method AddTen")] HRESULT AddTen();
+	};
+
+
+[
+	uuid(B86BF921-CF3C-11D1-94F0-0020AF715AF0),
+	version(1.0),
+	helpstring("RemOutServer 1.0 Type Library")
+]
+library REMOUTSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+	[
+		uuid(B86BF930-CF3C-11D1-94F0-0020AF715AF0),
+		helpstring("RemOutServer Class")
+	]
+	coclass RemOutServer
+	{
+		[default] interface IAddEnd;
+		interface IAdd;
+	};
+
+};

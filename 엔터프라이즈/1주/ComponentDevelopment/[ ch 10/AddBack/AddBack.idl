@@ -1,0 +1,74 @@
+// AddBack.idl : IDL source for AddBack.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AddBack.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(0B39A1AD-ECAD-11D3-8255-0000C0B11065),
+		dual,
+		helpstring("IAddBack Interface"),
+		pointer_default(unique)
+	]
+	interface IAddBack : IDispatch
+	{
+		[id(1), helpstring("method Add")] HRESULT Add();
+		[id(2), helpstring("method AddTen")] HRESULT AddTen();
+		[id(3), helpstring("method Clear")] HRESULT Clear();
+		[propget, id(4), helpstring("property AddEnd")] HRESULT AddEnd([out, retval] short *pVal);
+		[propput, id(4), helpstring("property AddEnd")] HRESULT AddEnd([in] short newVal);
+		[propget, id(5), helpstring("property Sum")] HRESULT Sum([out, retval] short *pVal);
+	};
+// add by hand
+	[
+		object,
+		uuid(AF0E9761-ECD3-11d3-8255-0000C0B11065),
+		dual,
+		helpstring("IAddBackEvent Interface"),
+		pointer_default(unique)
+	]
+	interface IAddBackEvent : IDispatch
+	{
+		[id(1), helpstring("method ChangedAddEnd")] HRESULT ChangedAddEnd([in] short newVal);
+		[id(2), helpstring("method ChangedSum")] HRESULT ChangedSum([in] short newVal);
+	};
+// add end
+
+
+[
+	uuid(0B39A1A1-ECAD-11D3-8255-0000C0B11065),
+	version(1.0),
+	helpstring("AddBack 1.0 Type Library")
+]
+library ADDBACKLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(9362EF01-ECD5-11d3-8255-0000C0B11065),
+		nonextensible
+	]
+	dispinterface _DIAddBackEvent
+	{
+	properties:
+	methods:
+		[id(1)] void ChangedAddEnd([in] short newVal);
+		[id(2)] void ChangedSum([in] short newVal);
+	};
+
+	[
+		uuid(0B39A1AE-ECAD-11D3-8255-0000C0B11065),
+		helpstring("AddBack Class")
+	]
+
+	coclass AddBack
+	{
+		[default] interface IAddBack;
+		[default, source] dispinterface _DIAddBackEvent;
+		[source] interface IAddbackEvent;
+	};
+};

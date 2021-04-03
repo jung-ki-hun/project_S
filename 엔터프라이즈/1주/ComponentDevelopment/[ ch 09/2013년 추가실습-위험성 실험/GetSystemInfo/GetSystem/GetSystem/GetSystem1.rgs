@@ -1,0 +1,26 @@
+HKCR
+{
+	GetSystem.GetSystem.1 = s 'GetSystem Class'
+	{
+		CLSID = s '{18B35A4B-9023-42F9-BC7C-D79446E9069E}'
+	}
+	GetSystem.GetSystem = s 'GetSystem Class'
+	{
+		CLSID = s '{18B35A4B-9023-42F9-BC7C-D79446E9069E}'
+		CurVer = s 'GetSystem.GetSystem.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {18B35A4B-9023-42F9-BC7C-D79446E9069E} = s 'GetSystem Class'
+		{
+			ProgID = s 'GetSystem.GetSystem.1'
+			VersionIndependentProgID = s 'GetSystem.GetSystem'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{7779A0EC-78F9-4824-A708-8A2602CE669A}'
+		}
+	}
+}

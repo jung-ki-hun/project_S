@@ -1,0 +1,32 @@
+
+p. 596의 ShapeTest 컨테이너 만들기 중
+
+p.598의 contol의 등록과 p.600의 10번 항목을 
+제외한 p.601 12번 항목까지 완성한 상태. 
+
+
+리얼 하게 ActiveX에 대한 예를 보이기 위해서
+사용예의 과정을 최대한 어필
+
+ 
+1. Component 등록
+
+  > regsvr32 Shape.dll
+
+  .ocx 파일일 경우에도 동일하게  
+  > regsvr32 Shape.ocx
+
+2. Original-ShapeTest폴더를 Test용으로 폴더 복사
+
+3. Contol 추가 - page. 598
+  
+- ActiveX contorl을 project에 추가한다. 
+- Contols Toolbar에 추가한 contol의 ICON 확인
+- Dialog Box에 포함시킨다 : IDC_SHAPE. p.599
+
+
+4. IDC_SHAPE에 대한 control형 data member를 연결한다. p.600:10번
+- OnClickme() 함수에서는 IDC_SHAPE를  
+  변수명 m_ctlShape로 연결하는 것으로 가정하고 작성해 두었음
+
+-- Complile and Test

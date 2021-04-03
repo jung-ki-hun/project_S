@@ -1,0 +1,25 @@
+HKCR
+{
+	CSyhStat.Stat.1 = s 'Stat Class'
+	{
+		CLSID = s '{2B2740C6-2614-4C43-B7F1-600120871044}'
+	}
+	CSyhStat.Stat = s 'Stat Class'
+	{
+		CLSID = s '{2B2740C6-2614-4C43-B7F1-600120871044}'
+		CurVer = s 'CSyhStat.Stat.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {2B2740C6-2614-4C43-B7F1-600120871044} = s 'Stat Class'
+		{
+			ProgID = s 'CSyhStat.Stat.1'
+			VersionIndependentProgID = s 'CSyhStat.Stat'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{8044255C-7397-430F-BBC9-92FBE71E8BC3}'
+		}
+	}
+}

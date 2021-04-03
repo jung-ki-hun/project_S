@@ -1,0 +1,26 @@
+HKCR
+{
+	MyAddSub.MyAddSub.1 = s 'MyAddSub Class'
+	{
+		CLSID = s '{A3778159-0969-4D60-8934-9FCF9E265BDA}'
+	}
+	MyAddSub.MyAddSub = s 'MyAddSub Class'
+	{
+		CLSID = s '{A3778159-0969-4D60-8934-9FCF9E265BDA}'
+		CurVer = s 'MyAddSub.MyAddSub.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A3778159-0969-4D60-8934-9FCF9E265BDA} = s 'MyAddSub Class'
+		{
+			ProgID = s 'MyAddSub.MyAddSub.1'
+			VersionIndependentProgID = s 'MyAddSub.MyAddSub'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{5B070D20-1613-4081-A859-1546FCC32341}'
+		}
+	}
+}

@@ -1,0 +1,26 @@
+HKCR
+{
+	AddBack.AddBack.1 = s 'AddBack Class'
+	{
+		CLSID = s '{CCB972C9-C400-4ECB-812C-FBC7BAFD4927}'
+	}
+	AddBack.AddBack = s 'AddBack Class'
+	{
+		CLSID = s '{CCB972C9-C400-4ECB-812C-FBC7BAFD4927}'
+		CurVer = s 'AddBack.AddBack.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CCB972C9-C400-4ECB-812C-FBC7BAFD4927} = s 'AddBack Class'
+		{
+			ProgID = s 'AddBack.AddBack.1'
+			VersionIndependentProgID = s 'AddBack.AddBack'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{AFF61B1F-F86E-462D-BB59-EBC02BA0769A}'
+		}
+	}
+}

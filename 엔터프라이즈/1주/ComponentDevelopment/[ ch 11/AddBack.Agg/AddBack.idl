@@ -1,0 +1,40 @@
+// AddBack.idl : IDL source for AddBack.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AddBack.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(127F8D51-B1DB-49E9-9F56-D06A0EE0C500),
+		dual,
+		helpstring("IAddBack Interface"),
+		pointer_default(unique)
+	]
+	interface IAddBack : IDispatch
+	{
+		[id(1), helpstring("method Add")] HRESULT Add();
+		[id(2), helpstring("method AddTen")] HRESULT AddTen();
+	};
+
+[
+	uuid(C9B7AF1A-4E30-45AD-AA72-8F7A8515332B),
+	version(1.0),
+	helpstring("AddBack 1.0 Type Library")
+]
+library ADDBACKLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(780D8EC7-1C8F-4039-B1E7-81F248EA0E59),
+		helpstring("AddBack Class")
+	]
+	coclass AddBack
+	{
+		[default] interface IAddBack;
+	};
+};

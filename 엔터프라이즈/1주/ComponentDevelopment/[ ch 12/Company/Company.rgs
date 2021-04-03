@@ -1,0 +1,26 @@
+HKCR
+{
+	Company.Company.1 = s 'Company Class'
+	{
+		CLSID = s '{77EE056D-5BA1-477D-9ADF-D0406EB0DB77}'
+	}
+	Company.Company = s 'Company Class'
+	{
+		CLSID = s '{77EE056D-5BA1-477D-9ADF-D0406EB0DB77}'
+		CurVer = s 'Company.Company.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {77EE056D-5BA1-477D-9ADF-D0406EB0DB77} = s 'Company Class'
+		{
+			ProgID = s 'Company.Company.1'
+			VersionIndependentProgID = s 'Company.Company'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{936AB831-E7CE-4580-B3FF-5D5785C361B2}'
+		}
+	}
+}

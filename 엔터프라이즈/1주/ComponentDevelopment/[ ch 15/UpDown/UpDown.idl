@@ -1,0 +1,59 @@
+// UpDown.idl : IDL source for UpDown.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (UpDown.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(57AA6419-B53B-4FEB-805C-97DDAB76C2B1),
+		dual,
+		helpstring("IUpDown Interface"),
+		pointer_default(unique)
+	]
+	interface IUpDown : IDispatch
+	{
+		[propget, id(1), helpstring("property MinValue")] HRESULT MinValue([out, retval] short *pVal);
+		[propput, id(1), helpstring("property MinValue")] HRESULT MinValue([in] short newVal);
+		[propget, id(2), helpstring("property MaxValue")] HRESULT MaxValue([out, retval] short *pVal);
+		[propput, id(2), helpstring("property MaxValue")] HRESULT MaxValue([in] short newVal);
+		[propget, id(3), helpstring("property Value")] HRESULT Value([out, retval] short *pVal);
+		[propput, id(3), helpstring("property Value")] HRESULT Value([in] short newVal);
+	};
+
+[
+	uuid(746B3C5D-1128-4845-96E7-B1546A1D9669),
+	version(1.0),
+	helpstring("UpDown 1.0 Type Library")
+]
+library UPDOWNLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(DFEC1C92-457A-4F33-A9CB-373E294C7814),
+		helpstring("_IUpDownEvents Interface")
+	]
+	dispinterface _IUpDownEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method Changed")] HRESULT Changed([in] int newVal);
+	};
+
+	[
+		uuid(62419612-801A-47C3-983F-CD6C5F4679A3),
+		helpstring("UpDown Class")
+	]
+	coclass UpDown
+	{
+		[default] interface IUpDown;
+		[default, source] dispinterface _IUpDownEvents;
+	};
+};

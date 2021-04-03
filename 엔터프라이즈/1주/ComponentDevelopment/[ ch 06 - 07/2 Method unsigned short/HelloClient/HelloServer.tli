@@ -1,0 +1,18 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (7d795e03).
+//
+// HelloServer.tli
+//
+// Wrapper implementations for Win32 type library ..\HelloServer\HelloServer.tlb
+// compiler-generated file created 05/07/06 at 11:56:08 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IHello wrapper method implementations
+//
+
+inline HRESULT IHello::sayHello ( unsigned short * name, unsigned short * * message ) {
+    HRESULT _hr = raw_sayHello(name, message);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

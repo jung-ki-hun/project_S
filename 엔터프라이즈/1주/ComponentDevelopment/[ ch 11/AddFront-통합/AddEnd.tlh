@@ -1,0 +1,80 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (f04ccc77).
+//
+// AddEnd.tlh
+//
+// C++ source equivalent of Win32 type library ..\AddEnd\AddEnd.tlb
+// compiler-generated file created 06/04/08 at 10:13:52 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct /* coclass */ AddEnd;
+struct __declspec(uuid("9c40083f-1d1c-4403-95bb-94c73055357e"))
+/* dual interface */ IAddEnd;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAddEnd, __uuidof(IAddEnd));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("33eb3867-9bbd-4439-892b-ac02c8629161"))
+AddEnd;
+    // [ default ] interface IAddEnd
+
+struct __declspec(uuid("9c40083f-1d1c-4403-95bb-94c73055357e"))
+IAddEnd : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAddEnd,put=PutAddEnd))
+    short AddEnd;
+    __declspec(property(get=GetSum,put=PutSum))
+    short Sum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Clear ( );
+    short GetAddEnd ( );
+    void PutAddEnd (
+        short pVal );
+    short GetSum ( );
+    void PutSum (
+        short pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Clear ( ) = 0;
+    virtual HRESULT __stdcall get_AddEnd (
+        short * pVal ) = 0;
+    virtual HRESULT __stdcall put_AddEnd (
+        short pVal ) = 0;
+    virtual HRESULT __stdcall get_Sum (
+        short * pVal ) = 0;
+    virtual HRESULT __stdcall put_Sum (
+        short pVal ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "AddEnd.tli"
+
+#pragma pack(pop)

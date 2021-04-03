@@ -1,0 +1,27 @@
+typedef struct
+{
+	int Number[10];
+}Numbers;
+
+
+[
+	object,
+	uuid(123456A0-A074-11d1-B20C-0060970A3516)
+]
+
+interface IStat : IUnknown
+{
+	import "unknwn.idl";
+
+	HRESULT Mean([in]Numbers Num, [out]double *distance);
+	HRESULT Variance([in]Numbers Num, [out]double *distance);
+};
+
+interface IClsid : IUnknown
+{
+	import "unknwn.idl";
+
+	HRESULT getclsid([out, string]wchar_t** message);
+};
+
+

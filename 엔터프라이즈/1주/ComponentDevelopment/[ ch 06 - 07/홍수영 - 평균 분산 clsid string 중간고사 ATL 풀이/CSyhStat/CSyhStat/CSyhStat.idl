@@ -1,0 +1,58 @@
+// CSyhStat.idl : CSyhStat의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(CSyhStat.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+typedef struct
+{
+    int dat[10];
+} data;
+
+[
+	object,
+	uuid(102D7E28-D619-4A00-90D8-B897C96633B6),
+	helpstring("IStat 인터페이스"),
+	pointer_default(unique)
+]
+interface IStat : IUnknown{
+    [helpstring("메서드 mean")] HRESULT mean([in] data dataInput, [out] double * meanResult);
+    [helpstring("메서드 variance")] HRESULT variance([in] data dataInput, [out] double * varianceResult);
+};
+[
+	object,
+	uuid(96C57569-C391-4C00-8232-F9A9DE072C72),
+	helpstring("IClsid 인터페이스"),
+	pointer_default(unique)
+]
+interface IClsid : IUnknown{
+    [helpstring("메서드 getclsid")] HRESULT getclsid([out] unsigned short ** message);
+};
+[
+	uuid(8044255C-7397-430F-BBC9-92FBE71E8BC3),
+	version(1.0),
+	helpstring("CSyhStat 1.0 형식 라이브러리")
+]
+library CSyhStatLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(2B2740C6-2614-4C43-B7F1-600120871044),
+		helpstring("Stat Class")
+	]
+	coclass Stat
+	{
+		[default] interface IStat;
+	};
+	[
+		uuid(11B7F1F6-0289-4C8A-A691-3E6E7241DE8E),
+		helpstring("Clsid Class")
+	]
+	coclass Clsid
+	{
+		[default] interface IClsid;
+	};
+};

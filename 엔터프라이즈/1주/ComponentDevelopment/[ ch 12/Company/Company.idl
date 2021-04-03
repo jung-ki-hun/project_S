@@ -1,0 +1,87 @@
+// Company.idl : IDL source for Company.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Company.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(ECA4926A-D50F-4988-B438-92CE9620E04F),
+		dual,
+		helpstring("ICompany Interface"),
+		pointer_default(unique)
+	]
+	interface ICompany : IDispatch
+	{
+		[propget, id(1), helpstring("property Employees")] HRESULT Employees([out, retval] VARIANT *pVal);
+	};
+	[
+		object,
+		uuid(A9469C63-95F4-4F5A-9723-3FAA8866BB1B),
+		dual,
+		helpstring("IEmployees Interface"),
+		pointer_default(unique)
+	]
+	interface IEmployees : IDispatch
+	{
+		[propget, id(1), helpstring("property Count")] HRESULT Count([out, retval] long *pVal);
+		[propget, id(DISPID_VALUE), helpstring("property Item")] HRESULT Item([in] long index, [out, retval] VARIANT *pVal);
+		[propget, id(DISPID_NEWENUM), helpstring("property _NewEnum")] HRESULT _NewEnum([out, retval] LPUNKNOWN *pVal);
+	};
+	[
+		object,
+		uuid(1E5EDAC6-7B4C-4CB7-A6AC-79393CB466C6),
+		dual,
+		helpstring("IEmployee Interface"),
+		pointer_default(unique)
+	]
+	interface IEmployee : IDispatch
+	{
+		[propget, id(1), helpstring("property Name")] HRESULT Name([out, retval] BSTR *pVal);
+		[propget, id(2), helpstring("property Address")] HRESULT Address([out, retval] BSTR *pVal);
+		[propget, id(3), helpstring("property Telephone")] HRESULT Telephone([out, retval] BSTR *pVal);
+	};
+
+[
+	uuid(936AB831-E7CE-4580-B3FF-5D5785C361B2),
+	version(1.0),
+	helpstring("Company 1.0 Type Library")
+]
+library COMPANYLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	interface IEmployees;
+	interface IEmployee;
+
+	[
+		uuid(77EE056D-5BA1-477D-9ADF-D0406EB0DB77),
+		helpstring("Company Class")
+	]
+	coclass Company
+	{
+		[default] interface ICompany;
+	};
+	/*
+	[
+		uuid(347DAF54-C9C6-4E6E-8916-0DF589889492),
+		helpstring("Employees Class")
+	]
+	coclass Employees
+	{
+		[default] interface IEmployees;
+	};
+	
+	[
+		uuid(0C986751-59A5-4832-83C4-EEE903CA1DDE),
+		helpstring("Employee Class")
+	]
+	coclass Employee
+	{
+		[default] interface IEmployee;
+	};
+	*/
+};

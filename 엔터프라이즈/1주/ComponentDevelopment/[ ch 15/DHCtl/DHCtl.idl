@@ -1,0 +1,60 @@
+// DHCtl.idl : IDL source for DHCtl.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (DHCtl.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(5EA45DD6-6B33-4B4E-810F-60EA91CCAD18),
+		dual,
+		helpstring("IDHCtl Interface"),
+		pointer_default(unique)
+	]
+	interface IDHCtl : IDispatch
+	{
+		[propget, id(1), helpstring("property UrlPath")] HRESULT UrlPath([out, retval] BSTR *pVal);
+		[propput, id(1), helpstring("property UrlPath")] HRESULT UrlPath([in] BSTR newVal);
+		[id(2), helpstring("method GoToURL")] HRESULT GoToURL();
+	};
+	
+
+	
+	[
+		object, dual,
+		uuid(A7104204-03ED-4BBB-BAA3-386B8ED733D3),
+		helpstring("IDHCtlUI Interface"),
+		pointer_default(unique)
+	]
+	interface IDHCtlUI : IDispatch
+	{
+		// Example method that will be called by the HTML
+		HRESULT OnClick([in]IDispatch* pdispBody, [in]VARIANT varColor);
+		[id(1), helpstring("method GoToHome")] HRESULT GoToHome();
+	};
+
+[
+	uuid(DEF1582B-5D23-4C55-AB71-BF8B9ECAC240),
+	version(1.0),
+	helpstring("DHCtl 1.0 Type Library")
+]
+library DHCTLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(07B19F58-F23E-4BEC-97DC-A167C77BF6D1),
+		helpstring("DHCtl Class")
+	]
+	coclass DHCtl
+	{
+		[default] interface IDHCtl;
+		interface IDHCtlUI;
+	};
+};

@@ -1,0 +1,23 @@
+; Sample INF file for AddBackATL.DLL
+[version] 
+; version signature (same for both NT and Win95) do not remove
+signature="$CHICAGO$"
+AdvancedINF=2.0  
+
+[Add.Code]
+AddBackATL.dll=AddBackATL.dll
+atl.dll=atl.dll
+
+; needed DLL
+[atl.dll]
+file-win32-x86=thiscab
+FileVersion=2,00,0,7024
+DestDir=11
+RegisterServer=yes 
+
+[AddBackATL.dll]
+file-win32-x86=thiscab
+clsid={6D8D50AD-AD3D-4670-A25F-9E3E6E11680F} 
+FileVersion=1,0,0,1 
+RegisterServer=yes  
+; end of INF file

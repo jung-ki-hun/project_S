@@ -1,0 +1,22 @@
+[
+	object,
+	uuid(543A14AF-8997-4ad7-8B75-E753FF641B5E)
+]
+interface IStat : IUnknown
+{
+	import "unknwn.idl";
+
+	HRESULT mean([in, size_is(10)]int *data, [out]double *value);
+	HRESULT variance([in, size_is(10)]int *data, [out]double *value);
+};
+[
+	object,
+	uuid(EA27B4FB-9A95-4656-8F02-1D9654DC134B)
+]
+interface IClsid : IUnknown
+{
+	import "unknwn.idl";
+
+	HRESULT getclsid([string][out]wchar_t
+		**value);
+};

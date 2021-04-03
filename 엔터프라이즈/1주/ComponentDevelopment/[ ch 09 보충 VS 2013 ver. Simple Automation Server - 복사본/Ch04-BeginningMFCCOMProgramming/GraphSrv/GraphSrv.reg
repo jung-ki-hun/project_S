@@ -1,0 +1,30 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+HKEY_CLASSES_ROOT\.srv = GraphSrv.Document
+HKEY_CLASSES_ROOT\GraphSrv.Document\shell\open\command = GRAPHSRV.EXE %1
+HKEY_CLASSES_ROOT\GraphSrv.Document\shell\open\ddeexec = [open("%1")]
+HKEY_CLASSES_ROOT\GraphSrv.Document\shell\open\ddeexec\application = GRAPHSRV
+    ; note: the application is optional
+    ;  (it defaults to the app name in "command")
+
+HKEY_CLASSES_ROOT\GraphSrv.Document = GraphS Document
+HKEY_CLASSES_ROOT\GraphSrv.Document\protocol\StdFileEditing\server = GRAPHSRV.EXE
+HKEY_CLASSES_ROOT\GraphSrv.Document\protocol\StdFileEditing\verb\0 = &Edit
+HKEY_CLASSES_ROOT\GraphSrv.Document\Insertable =
+HKEY_CLASSES_ROOT\GraphSrv.Document\CLSID = {9A1C8724-96CC-11D0-9257-00201834E2A3}
+
+HKEY_CLASSES_ROOT\CLSID\{9A1C8724-96CC-11D0-9257-00201834E2A3} = GraphS Document
+HKEY_CLASSES_ROOT\CLSID\{9A1C8724-96CC-11D0-9257-00201834E2A3}\DefaultIcon = GRAPHSRV.EXE,1
+HKEY_CLASSES_ROOT\CLSID\{9A1C8724-96CC-11D0-9257-00201834E2A3}\LocalServer32 = GRAPHSRV.EXE
+HKEY_CLASSES_ROOT\CLSID\{9A1C8724-96CC-11D0-9257-00201834E2A3}\ProgId = GraphSrv.Document
+HKEY_CLASSES_ROOT\CLSID\{9A1C8724-96CC-11D0-9257-00201834E2A3}\MiscStatus = 32
+HKEY_CLASSES_ROOT\CLSID\{9A1C8724-96CC-11D0-9257-00201834E2A3}\AuxUserType\3 = GraphSrv
+HKEY_CLASSES_ROOT\CLSID\{9A1C8724-96CC-11D0-9257-00201834E2A3}\AuxUserType\2 = GraphS
+HKEY_CLASSES_ROOT\CLSID\{9A1C8724-96CC-11D0-9257-00201834E2A3}\Insertable = 
+HKEY_CLASSES_ROOT\CLSID\{9A1C8724-96CC-11D0-9257-00201834E2A3}\verb\1 = &Open,0,2
+HKEY_CLASSES_ROOT\CLSID\{9A1C8724-96CC-11D0-9257-00201834E2A3}\verb\0 = &Edit,0,2
+HKEY_CLASSES_ROOT\CLSID\{9A1C8724-96CC-11D0-9257-00201834E2A3}\InprocHandler32 = ole32.dll

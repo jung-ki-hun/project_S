@@ -1,0 +1,19 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 12.00.21005.1 (63eb7717).
+//
+// c:\users\student\documents\visual studio 2013\projects\addclient\debug\addserver.tli
+//
+// Wrapper implementations for Win32 type library C:\Users\student\Documents\Visual Studio 2013\Projects\AddServer\Debug\AddServer.tlb
+// compiler-generated file created 05/10/18 at 10:59:20 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IAdd wrapper method implementations
+//
+
+inline int IAdd::Add ( int a, int b ) {
+    int _result = 0;
+    HRESULT _hr = raw_Add(a, b, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}

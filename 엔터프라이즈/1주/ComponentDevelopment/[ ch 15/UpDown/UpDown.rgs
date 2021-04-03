@@ -1,0 +1,34 @@
+HKCR
+{
+	UpDown.UpDown.1 = s 'UpDown Class'
+	{
+		CLSID = s '{62419612-801A-47C3-983F-CD6C5F4679A3}'
+	}
+	UpDown.UpDown = s 'UpDown Class'
+	{
+		CLSID = s '{62419612-801A-47C3-983F-CD6C5F4679A3}'
+		CurVer = s 'UpDown.UpDown.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {62419612-801A-47C3-983F-CD6C5F4679A3} = s 'UpDown Class'
+		{
+			ProgID = s 'UpDown.UpDown.1'
+			VersionIndependentProgID = s 'UpDown.UpDown'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{746B3C5D-1128-4845-96E7-B1546A1D9669}'
+			'Version' = s '1.0'
+		}
+	}
+}

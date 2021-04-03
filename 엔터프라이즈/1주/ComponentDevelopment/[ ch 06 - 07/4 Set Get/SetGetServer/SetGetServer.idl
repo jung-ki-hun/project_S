@@ -1,0 +1,54 @@
+// SetGetServer.idl : IDL source for SetGetServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SetGetServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	
+	[
+		object,
+		uuid(A81347A8-C8E2-46BF-9339-66D995218147),
+		helpstring("ISetGet Interface"),
+		pointer_default(unique)
+	]
+	interface ISetGet : IUnknown
+	{
+		[helpstring("method Set")] HRESULT Set([in] int setData);
+		[helpstring("method Get")] HRESULT Get([out] int * getData);
+	};
+
+	[
+		object,
+		uuid(06951608-CA64-44CA-A405-4DA467F6E4A9),
+		helpstring("IAddSub Interface"),
+		pointer_default(unique)
+	]
+	interface IAddSub : IUnknown
+	{
+		[helpstring("method Add")] HRESULT Add([in] int addend);
+		[helpstring("method Sub")] HRESULT Sub([in] int subtrahend);
+	};
+
+[
+	uuid(37A0CFF2-2EB7-4FA3-9E44-CD6D656AA28A),
+	version(1.0),
+	helpstring("SetGetServer 1.0 Type Library")
+]
+library SETGETSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+	[
+		uuid(457B1293-605C-4616-B4B5-985AA1E3CD2E),
+		helpstring("SetGet Class")
+	]
+	coclass SetGet
+	{
+		[default] interface ISetGet;
+		interface IAddSub;
+	};
+};

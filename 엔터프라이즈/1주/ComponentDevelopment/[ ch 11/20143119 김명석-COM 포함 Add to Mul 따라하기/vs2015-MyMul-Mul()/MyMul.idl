@@ -1,0 +1,47 @@
+// MyMul.idl : MyMul의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(MyMul.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(218EDA41-F520-40A4-99E0-D723E33AAC96),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IMyMul : IDispatch{
+	[id(1)] HRESULT Mul([in] int a, [in] int b, [out] int* c);
+};
+[
+	object,
+	uuid(807AB44B-5B2F-4E94-9661-7F188DB1CC0A)
+]
+interface ISansu : IUnknown
+{
+	import "unknwn.idl";
+
+	HRESULT Add([in]int a, [in]int b, [out, retval]int *c);
+};
+[
+	uuid(4A2F56DC-2DB1-4C1A-A5C7-09D735AAEEE3),
+	version(1.0),
+]
+library MyMulLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(14A65A3D-8775-4570-A291-695C6910CE1F)		
+	]
+	coclass MyMul
+	{
+		[default] interface IMyMul;
+		interface ISansu;
+	};
+};
+
+import "shobjidl.idl";

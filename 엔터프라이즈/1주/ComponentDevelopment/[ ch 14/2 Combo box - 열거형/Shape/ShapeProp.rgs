@@ -1,0 +1,23 @@
+HKCR
+{
+	Shape.ShapeProp.1 = s 'ShapeProp Class'
+	{
+		CLSID = s '{4D7FFD84-0598-4E79-816F-E935680E1599}'
+	}
+	Shape.ShapeProp = s 'ShapeProp Class'
+	{
+		CLSID = s '{4D7FFD84-0598-4E79-816F-E935680E1599}'
+		CurVer = s 'Shape.ShapeProp.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4D7FFD84-0598-4E79-816F-E935680E1599} = s 'ShapeProp Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

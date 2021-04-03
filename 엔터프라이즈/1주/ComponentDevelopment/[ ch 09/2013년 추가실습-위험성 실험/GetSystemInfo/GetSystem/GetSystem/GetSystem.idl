@@ -1,0 +1,37 @@
+// GetSystem.idl : GetSystem의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(GetSystem.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(4EEC4AAE-5EDA-4CF3-AF64-F982EA1A29B0),
+	dual,
+	nonextensible,
+	helpstring("IGetSystem 인터페이스"),
+	pointer_default(unique)
+]
+interface IGetSystem : IDispatch{
+	[id(3)] HRESULT getSystemBstr([out,retval] BSTR* p_value);
+};
+[
+	uuid(7779A0EC-78F9-4824-A708-8A2602CE669A),
+	version(1.0),
+	helpstring("GetSystem 1.0 형식 라이브러리")
+]
+library GetSystemLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(18B35A4B-9023-42F9-BC7C-D79446E9069E),
+		helpstring("GetSystem Class")
+	]
+	coclass GetSystem
+	{
+		[default] interface IGetSystem;
+	};
+};

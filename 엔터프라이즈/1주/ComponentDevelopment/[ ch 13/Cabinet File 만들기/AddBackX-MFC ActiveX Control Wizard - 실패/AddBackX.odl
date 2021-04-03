@@ -1,0 +1,74 @@
+// AddBackX.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (AddBackX.tlb) that will become a resource in
+// AddBackX.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(2B9B64B5-A659-45A5-BE6B-273DFC7AAFC6), version(1.0),
+  helpfile("AddBackX.hlp"),
+  helpstring("AddBackX ActiveX Control module"),
+  control ]
+library ADDBACKXLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CAddBackXCtrl
+
+	[ uuid(DE2046E6-0A49-4809-888D-3839545FBEFF),
+	  helpstring("Dispatch interface for AddBackX Control"), hidden ]
+	dispinterface _DAddBackX
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CAddBackXCtrl)
+			[id(1)] short AddEnd;
+			[id(2)] short Sum;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CAddBackXCtrl)
+			[id(3)] void Clear();
+			[id(4)] void Add();
+			[id(5)] void AddTen();
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CAddBackXCtrl
+
+	[ uuid(517DC723-42E4-4E37-8B19-42F09F64900D),
+	  helpstring("Event interface for AddBackX Control") ]
+	dispinterface _DAddBackXEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CAddBackXCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CAddBackXCtrl
+
+	[ uuid(E80C2AC5-9F7D-4FFB-BFB0-9B2FCCFBB530),
+	  helpstring("AddBackX Control"), control ]
+	coclass AddBackX
+	{
+		[default] dispinterface _DAddBackX;
+		[default, source] dispinterface _DAddBackXEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

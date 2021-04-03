@@ -1,0 +1,53 @@
+HKCR
+{
+	Shape.Shape.1 = s 'Shape Class'
+	{
+		CLSID = s '{82333237-5AFB-4413-86A3-BC4250708295}'
+	}
+	Shape.Shape = s 'Shape Class'
+	{
+		CLSID = s '{82333237-5AFB-4413-86A3-BC4250708295}'
+		CurVer = s 'Shape.Shape.1'
+	}
+	NoRemove CLSID
+	{
+		NoRemove 'Component Categories'
+		{
+			'{7DD95801-9882-11CF-9FA9-00AA006C42C4}' = s '0'
+			{
+				'800' = s 'Safe for scripting'
+			}
+			'{7DD95802-9882-11CF-9FA9-00AA006C42C4}' = s '0'
+			{
+				'800' = s 'Safe for initializing'
+			}
+		}
+		ForceRemove {82333237-5AFB-4413-86A3-BC4250708295} = s 'Shape Class'
+		{
+			'Implemented Categories'
+			{
+				'{7DD95801-9882-11CF-9FA9-00AA006C42C4}'
+			}
+			'Implemented Categories'
+			{
+				'{7DD95802-9882-11CF-9FA9-00AA006C42C4}'
+			}
+			ProgID = s 'Shape.Shape.1'
+			VersionIndependentProgID = s 'Shape.Shape'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{0FDDF9AB-E68D-4F71-B94F-EC198F436938}'
+			'Version' = s '1.0'
+		}
+	}
+}

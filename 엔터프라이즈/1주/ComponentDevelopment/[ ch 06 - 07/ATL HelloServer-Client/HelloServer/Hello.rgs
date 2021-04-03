@@ -1,0 +1,26 @@
+HKCR
+{
+	HelloServer.Hello.1 = s 'Hello Class'
+	{
+		CLSID = s '{708749DA-A7DA-4C20-A175-09FF550C8431}'
+	}
+	HelloServer.Hello = s 'Hello Class'
+	{		
+		CurVer = s 'HelloServer.Hello.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {708749DA-A7DA-4C20-A175-09FF550C8431} = s 'Hello Class'
+		{
+			ProgID = s 'HelloServer.Hello.1'
+			VersionIndependentProgID = s 'HelloServer.Hello'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{65790A0E-D7AB-41C0-99CC-1F134700B909}'
+			Version = s '1.0'
+		}
+	}
+}

@@ -1,0 +1,55 @@
+﻿using System;
+
+interface IUnit
+{
+	void Move(int x, int y);
+	void Attack(int x, int y);
+	void Die();
+}
+
+class Marine : IUnit
+{
+	public void Move(int x, int y) { Console.WriteLine("아장 아장"); }
+	public void Attack(int x, int y) { Console.WriteLine("두두두두"); }
+	public void Die() { Console.WriteLine("으아악"); }
+}
+
+class SCV : IUnit
+{
+	public void Move(int x, int y) { Console.WriteLine("데굴 데굴"); }
+	public void Attack(int x, int y) { Console.WriteLine("찌직 찌직"); }
+	public void Die() { Console.WriteLine("펑~꽥꼬닥"); }
+}
+
+class Tank : IUnit
+{
+
+	#region IUnit 멤버
+
+	public void Move(int x, int y)
+	{
+		throw new NotImplementedException();
+	}
+
+	public void Attack(int x, int y)
+	{
+		throw new NotImplementedException();
+	}
+
+	public void Die()
+	{
+		throw new NotImplementedException();
+	}
+
+	#endregion
+}
+class CSTest
+{
+	static void Main()
+	{
+		Marine M = new Marine();
+		M.Move(5, 5);
+		M.Attack(10, 10);
+		M.Die();
+	}
+}

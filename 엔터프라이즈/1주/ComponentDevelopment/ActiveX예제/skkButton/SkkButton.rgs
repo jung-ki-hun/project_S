@@ -1,0 +1,34 @@
+HKCR
+{
+	SkkButton.SkkButton.1 = s 'SkkButton Class'
+	{
+		CLSID = s '{848B3494-E54D-41B7-AD20-389B56014A46}'
+	}
+	SkkButton.SkkButton = s 'SkkButton Class'
+	{
+		CLSID = s '{848B3494-E54D-41B7-AD20-389B56014A46}'
+		CurVer = s 'SkkButton.SkkButton.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {848B3494-E54D-41B7-AD20-389B56014A46} = s 'SkkButton Class'
+		{
+			ProgID = s 'SkkButton.SkkButton.1'
+			VersionIndependentProgID = s 'SkkButton.SkkButton'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{998C2711-2151-4E00-A053-0E95BE048EA9}'
+			'Version' = s '1.0'
+		}
+	}
+}

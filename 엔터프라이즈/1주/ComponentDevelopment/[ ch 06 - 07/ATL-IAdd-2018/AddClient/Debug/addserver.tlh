@@ -1,0 +1,64 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 12.00.21005.1 (63eb7717).
+//
+// c:\users\student\documents\visual studio 2013\projects\addclient\debug\addserver.tlh
+//
+// C++ source equivalent of Win32 type library C:\Users\student\Documents\Visual Studio 2013\Projects\AddServer\Debug\AddServer.tlb
+// compiler-generated file created 05/10/18 at 10:59:20 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("88987342-71ef-4cbc-ad4c-73975d1d833e"))
+/* LIBID */ __AddServerLib;
+struct /* coclass */ Add;
+struct __declspec(uuid("63156710-d235-4bb4-8971-3e2870d3b4fe"))
+/* interface */ IAdd;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAdd, __uuidof(IAdd));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("33d61acf-7482-48a3-97f2-fd8502a817d3"))
+Add;
+    // [ default ] interface IAdd
+
+struct __declspec(uuid("63156710-d235-4bb4-8971-3e2870d3b4fe"))
+IAdd : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    int Add (
+        int a,
+        int b );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Add (
+        /*[in]*/ int a,
+        /*[in]*/ int b,
+        /*[out,retval]*/ int * c ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\users\student\documents\visual studio 2013\projects\addclient\debug\addserver.tli"
+
+#pragma pack(pop)

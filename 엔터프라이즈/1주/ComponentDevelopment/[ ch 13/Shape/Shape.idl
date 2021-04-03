@@ -1,0 +1,61 @@
+// Shape.idl : IDL source for Shape.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Shape.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(FF07F41B-03A7-47AD-BED2-ED17CD29F1D2),
+		dual,
+		helpstring("IShape Interface"),
+		pointer_default(unique)
+	]
+	interface IShape : IDispatch
+	{
+		[propput, id(DISPID_FILLCOLOR)]
+		HRESULT FillColor([in]OLE_COLOR clr);
+		[propget, id(DISPID_FILLCOLOR)]
+		HRESULT FillColor([out, retval]OLE_COLOR* pclr);
+		[propget, id(1), helpstring("property ShapeType")] HRESULT ShapeType([out, retval] short *pVal);
+		[propput, id(1), helpstring("property ShapeType")] HRESULT ShapeType([in] short newVal);
+		[id(2), helpstring("method ChangeShape")] HRESULT ChangeShape(short shpType);
+	};
+
+[
+	uuid(0FDDF9AB-E68D-4F71-B94F-EC198F436938),
+	version(1.0),
+	helpstring("Shape 1.0 Type Library")
+]
+library SHAPELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(001B3A77-58CC-44BC-A738-74B85D8D66D5),
+		helpstring("_IShapeEvents Interface")
+	]
+	dispinterface _IShapeEvents
+	{
+		properties:
+		methods:
+			[id(1)] void ClickIn([in]long x, [in] long y);
+			[id(2)] void ClickOut([in]long x, [in] long y);
+	};
+
+	[
+		uuid(82333237-5AFB-4413-86A3-BC4250708295),
+		helpstring("Shape Class")
+	]
+	coclass Shape
+	{
+		[default] interface IShape;
+		[default, source] dispinterface _IShapeEvents;
+	};
+};

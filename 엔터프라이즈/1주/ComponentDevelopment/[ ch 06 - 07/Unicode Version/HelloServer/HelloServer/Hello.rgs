@@ -1,0 +1,25 @@
+HKCR
+{
+	HelloServer.Hello.1 = s 'Hello Class'
+	{
+		CLSID = s '{B66BC3E5-9C9F-4E54-806B-1FCFC73432B8}'
+	}
+	HelloServer.Hello = s 'Hello Class'
+	{
+		CLSID = s '{B66BC3E5-9C9F-4E54-806B-1FCFC73432B8}'
+		CurVer = s 'HelloServer.Hello.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B66BC3E5-9C9F-4E54-806B-1FCFC73432B8} = s 'Hello Class'
+		{
+			ProgID = s 'HelloServer.Hello.1'
+			VersionIndependentProgID = s 'HelloServer.Hello'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{C32E1082-4CD9-4C59-9745-AD821F1C421C}'
+		}
+	}
+}

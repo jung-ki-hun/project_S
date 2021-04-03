@@ -1,0 +1,10 @@
+D:\Skk Education\Study-Lang\MS.NET\닷넷프로그래밍정복-김상형\교재소스&나아의 실습-dotNetExam\07장=클래스 상속\[ skk 07\InheritStudentCastingTest\InheritStudent\obj\Debug\ResolveAssemblyReference.cache
+D:\Skk Education\Study-Lang\MS.NET\닷넷프로그래밍정복-김상형\교재소스&나아의 실습-dotNetExam\07장=클래스 상속\[ skk 07\InheritStudentCastingTest\InheritStudent\bin\Debug\InheritStudent.exe
+D:\Skk Education\Study-Lang\MS.NET\닷넷프로그래밍정복-김상형\교재소스&나아의 실습-dotNetExam\07장=클래스 상속\[ skk 07\InheritStudentCastingTest\InheritStudent\bin\Debug\InheritStudent.pdb
+D:\Skk Education\Study-Lang\MS.NET\닷넷프로그래밍정복-김상형\교재소스&나아의 실습-dotNetExam\07장=클래스 상속\[ skk 07\InheritStudentCastingTest\InheritStudent\obj\Debug\InheritStudent.exe
+D:\Skk Education\Study-Lang\MS.NET\닷넷프로그래밍정복-김상형\교재소스&나아의 실습-dotNetExam\07장=클래스 상속\[ skk 07\InheritStudentCastingTest\InheritStudent\obj\Debug\InheritStudent.pdb
+D:\Skk Education\Study-Lang\ComponentDevelopment\[ ch 02\Explicit Type Conversion\C# casting\InheritStudentCastingTest\InheritStudent\obj\Debug\InheritStudent.exe
+D:\Skk Education\Study-Lang\ComponentDevelopment\[ ch 02\Explicit Type Conversion\C# casting\InheritStudentCastingTest\InheritStudent\obj\Debug\InheritStudent.pdb
+D:\Skk Education\Study-Lang\ComponentDevelopment\[ ch 02\Explicit Type Conversion\C# casting\InheritStudentCastingTest\InheritStudent\obj\Debug\ResolveAssemblyReference.cache
+D:\Skk Education\Study-Lang\ComponentDevelopment\[ ch 02\Explicit Type Conversion\C# casting\InheritStudentCastingTest\InheritStudent\bin\Debug\InheritStudent.exe
+D:\Skk Education\Study-Lang\ComponentDevelopment\[ ch 02\Explicit Type Conversion\C# casting\InheritStudentCastingTest\InheritStudent\bin\Debug\InheritStudent.pdb

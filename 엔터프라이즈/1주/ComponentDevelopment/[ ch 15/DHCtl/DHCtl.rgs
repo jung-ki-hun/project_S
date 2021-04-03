@@ -1,0 +1,34 @@
+HKCR
+{
+	DHCtl.DHCtl.1 = s 'DHCtl Class'
+	{
+		CLSID = s '{07B19F58-F23E-4BEC-97DC-A167C77BF6D1}'
+	}
+	DHCtl.DHCtl = s 'DHCtl Class'
+	{
+		CLSID = s '{07B19F58-F23E-4BEC-97DC-A167C77BF6D1}'
+		CurVer = s 'DHCtl.DHCtl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {07B19F58-F23E-4BEC-97DC-A167C77BF6D1} = s 'DHCtl Class'
+		{
+			ProgID = s 'DHCtl.DHCtl.1'
+			VersionIndependentProgID = s 'DHCtl.DHCtl'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{DEF1582B-5D23-4C55-AB71-BF8B9ECAC240}'
+			'Version' = s '1.0'
+		}
+	}
+}

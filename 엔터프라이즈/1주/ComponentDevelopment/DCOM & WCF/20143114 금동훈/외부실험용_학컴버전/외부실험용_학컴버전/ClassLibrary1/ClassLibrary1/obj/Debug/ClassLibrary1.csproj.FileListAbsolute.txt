@@ -1,0 +1,31 @@
+c:\users\administrator\documents\visual studio 2010\Projects\ClassLibrary1\ClassLibrary1\obj\Debug\ResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2010\Projects\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+c:\users\administrator\documents\visual studio 2010\Projects\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.tlb
+c:\users\administrator\documents\visual studio 2010\Projects\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+c:\users\administrator\documents\visual studio 2010\Projects\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\rkfkr\source\repos\새 폴더\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\rkfkr\source\repos\새 폴더\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\rkfkr\source\repos\새 폴더\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\rkfkr\source\repos\새 폴더\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\rkfkr\source\repos\새 폴더\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\rkfkr\source\repos\새 폴더\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.tlb
+C:\Users\rkfkr\source\repos\새 폴더\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csprojAssemblyReference.cache
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.tlb
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Student\Desktop\외부실험용\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Student\Desktop\외부실험용\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Student\Desktop\외부실험용\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
+C:\Users\Student\Desktop\외부실험용\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Student\Desktop\외부실험용\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Student\Desktop\외부실험용\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.tlb
+C:\Users\Student\Desktop\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Student\Desktop\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Student\Desktop\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
+C:\Users\Student\Desktop\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Student\Desktop\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Student\Desktop\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.tlb

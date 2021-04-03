@@ -1,0 +1,25 @@
+C:\Users\rkfkr\source\repos\WCF_Server\bin\Debug\WCF_Server.exe.config
+C:\Users\rkfkr\source\repos\WCF_Server\bin\Debug\WCF_Server.exe
+C:\Users\rkfkr\source\repos\WCF_Server\bin\Debug\WCF_Server.pdb
+C:\Users\rkfkr\source\repos\WCF_Server\obj\Debug\WCF_Server.Form1.resources
+C:\Users\rkfkr\source\repos\WCF_Server\obj\Debug\WCF_Server.Properties.Resources.resources
+C:\Users\rkfkr\source\repos\WCF_Server\obj\Debug\WCF_Server.csproj.GenerateResource.cache
+C:\Users\rkfkr\source\repos\WCF_Server\obj\Debug\WCF_Server.csproj.CoreCompileInputs.cache
+C:\Users\rkfkr\source\repos\WCF_Server\obj\Debug\WCF_Server.exe
+C:\Users\rkfkr\source\repos\WCF_Server\obj\Debug\WCF_Server.pdb
+C:\Users\rkfkr\source\repos\WCF_Server\obj\Debug\WCF_Server.csprojAssemblyReference.cache
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\WCF_Server\bin\Debug\WCF_Server.exe.config
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\WCF_Server\bin\Debug\WCF_Server.exe
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\WCF_Server\bin\Debug\WCF_Server.pdb
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\WCF_Server\obj\Debug\WCF_Server.Form1.resources
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\WCF_Server\obj\Debug\WCF_Server.Properties.Resources.resources
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\WCF_Server\obj\Debug\WCF_Server.csproj.GenerateResource.cache
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\WCF_Server\obj\Debug\WCF_Server.csproj.CoreCompileInputs.cache
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\WCF_Server\obj\Debug\WCF_Server.exe
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\WCF_Server\obj\Debug\WCF_Server.pdb
+C:\Users\Student\Desktop\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\WCF_Server\bin\Debug\WCF_Server.exe.config
+C:\Users\Student\Desktop\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\WCF_Server\obj\Debug\WCF_Server.exe
+C:\Users\Student\Desktop\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\WCF_Server\obj\Debug\WCF_Server.pdb
+D:\Skk Education\[ 설계 Projects\엔터프라이즈응용프로그래밍-설계\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\WCF_Server\bin\Debug\WCF_Server.exe.config
+D:\Skk Education\[ 설계 Projects\엔터프라이즈응용프로그래밍-설계\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\WCF_Server\obj\Debug\WCF_Server.exe
+D:\Skk Education\[ 설계 Projects\엔터프라이즈응용프로그래밍-설계\2019년 1학기 엔터프라이즈\20143114 금동훈\외부실험용_학컴버전\외부실험용_학컴버전\WCF_Server\obj\Debug\WCF_Server.pdb

@@ -1,0 +1,26 @@
+HKCR
+{
+	MyMulDivAgg.MyMulDiv.1 = s 'MyMulDiv Class'
+	{
+		CLSID = s '{11463DE9-546D-444D-AA59-497D114C02DD}'
+	}
+	MyMulDivAgg.MyMulDiv = s 'MyMulDiv Class'
+	{
+		CLSID = s '{11463DE9-546D-444D-AA59-497D114C02DD}'
+		CurVer = s 'MyMulDivAgg.MyMulDiv.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {11463DE9-546D-444D-AA59-497D114C02DD} = s 'MyMulDiv Class'
+		{
+			ProgID = s 'MyMulDivAgg.MyMulDiv.1'
+			VersionIndependentProgID = s 'MyMulDivAgg.MyMulDiv'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{21034A56-C4F2-48F7-91F8-63AFA5ADFE8C}'
+		}
+	}
+}

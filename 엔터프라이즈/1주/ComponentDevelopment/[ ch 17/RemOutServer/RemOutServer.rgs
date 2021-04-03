@@ -1,0 +1,32 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{B86BF922-CF3C-11D1-94F0-0020AF715AF0} = s 'RemOutServer'
+		'RemOutServer.EXE'
+		{
+			val AppID = s {B86BF922-CF3C-11D1-94F0-0020AF715AF0}
+		}
+	}
+}
+HKCR
+{
+	RemOutServer.RemOutServer.1 = s 'RemOutServer Class'
+	{
+		CLSID = s '{B86BF930-CF3C-11D1-94F0-0020AF715AF0}'
+	}
+	RemOutServer.RemOutServer = s 'RemOutServer Class'
+	{
+		CLSID = s '{B86BF930-CF3C-11D1-94F0-0020AF715AF0}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B86BF930-CF3C-11D1-94F0-0020AF715AF0} = s 'RemOutServer Class'
+		{
+			ProgID = s 'RemOutServer.RemOutServer.1'
+			VersionIndependentProgID = s 'RemOutServer.RemOutServer'
+			val AppID = s '{B86BF922-CF3C-11D1-94F0-0020AF715AF0}'
+			LocalServer32 = s '%Module%'
+		}
+	}
+}

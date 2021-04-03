@@ -1,0 +1,23 @@
+HKCR
+{
+	HelloServer.Hello.2 = s 'Hello Class'
+	{
+		CLSID = s '{B23344A1-9B60-4C9E-BA39-4B97BD35A101}'
+	}
+	HelloServer.Hello = s 'Hello Class'
+	{
+		CLSID = s '{B23344A1-9B60-4C9E-BA39-4B97BD35A101}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B23344A1-9B60-4C9E-BA39-4B97BD35A101} = s 'Hello Class'
+		{
+			ProgID = s 'HelloServer.Hello.2'
+			VersionIndependentProgID = s 'HelloServer.Hello'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

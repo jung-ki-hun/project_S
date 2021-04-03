@@ -1,0 +1,50 @@
+/* this file contains the actual definitions of */
+/* the IIDs and CLSIDs */
+
+/* link this file in with the server and any clients */
+
+
+/* File created by MIDL compiler version 5.01.0164 */
+/* at Mon Jul 03 14:45:29 2006
+ */
+/* Compiler settings for C:\Skk Education\Study-Lang\ComponentDevelopment\[ ch 13\Cabinet File 만들기-실패\AddBack\AddBack.idl:
+    Oicf (OptLev=i2), W1, Zp8, env=Win32, ms_ext, c_ext
+    error checks: allocation ref bounds_check enum stub_data 
+*/
+//@@MIDL_FILE_HEADING(  )
+#ifdef __cplusplus
+extern "C"{
+#endif 
+
+
+#ifndef __IID_DEFINED__
+#define __IID_DEFINED__
+
+typedef struct _IID
+{
+    unsigned long x;
+    unsigned short s1;
+    unsigned short s2;
+    unsigned char  c[8];
+} IID;
+
+#endif // __IID_DEFINED__
+
+#ifndef CLSID_DEFINED
+#define CLSID_DEFINED
+typedef IID CLSID;
+#endif // CLSID_DEFINED
+
+const IID IID_IAddBack = {0x0B39A1AD,0xECAD,0x11D3,{0x82,0x55,0x00,0x00,0xC0,0xB1,0x10,0x65}};
+
+
+const IID LIBID_ADDBACKLib = {0x0B39A1A1,0xECAD,0x11D3,{0x82,0x55,0x00,0x00,0xC0,0xB1,0x10,0x65}};
+
+
+const CLSID CLSID_AddBack = {0x0B39A1AE,0xECAD,0x11D3,{0x82,0x55,0x00,0x00,0xC0,0xB1,0x10,0x65}};
+
+
+#ifdef __cplusplus
+}
+#endif
+

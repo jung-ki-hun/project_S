@@ -1,0 +1,51 @@
+// MyMulDiv.idl : MyMulDiv의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(MyMulDiv.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(5DD6D3F4-0203-4071-A0BF-C422FAA85AB5),
+	dual,
+	nonextensible,
+	helpstring("IMyMulDiv 인터페이스"),
+	pointer_default(unique)
+]
+interface IMyMulDiv : IDispatch{
+    [id(1), helpstring("메서드 Mul")] HRESULT Mul([in] short val1, [in] short val2, [out] short * result);
+    [id(2), helpstring("메서드 Div")] HRESULT Div([in] short val1, [in] short val2, [out] short * result);
+};
+[
+	object,
+	uuid(E32D89CF-0450-4CAF-8ECB-1D2048C6B0C8),
+	dual,
+	nonextensible,
+	helpstring("IMyAddSub 인터페이스"),
+	pointer_default(unique)
+]
+interface IMyAddSub : IDispatch{
+    [id(1), helpstring("메서드 Add")] HRESULT Add([in] short val1, [in] short val2, [out] short * result);
+    [id(2), helpstring("메서드 Sub")] HRESULT Sub([in] short val1, [in] short val2, [out] short * result);
+};
+[
+	uuid(8C6585A5-92ED-4191-9755-27AF90418941),
+	version(1.0),
+	helpstring("MyMulDiv 1.0 형식 라이브러리")
+]
+library MyMulDivLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(F8C2BF94-078B-4E5D-8F56-B8D2E41AD41A),
+		helpstring("MyMulDiv Class")
+	]
+	coclass MyMulDiv
+	{
+		[default] interface IMyMulDiv;
+        interface IMyAddSub;
+	};
+};

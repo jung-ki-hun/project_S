@@ -1,0 +1,59 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (b7184494).
+//
+// AddBack.tlh
+//
+// C++ source equivalent of Win32 type library ..\AddBack.Agg\AddBack.tlb
+// compiler-generated file created 06/04/08 at 10:13:52 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct /* coclass */ AddBack;
+struct __declspec(uuid("127f8d51-b1db-49e9-9f56-d06a0ee0c500"))
+/* dual interface */ IAddBack;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAddBack, __uuidof(IAddBack));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("780d8ec7-1c8f-4039-b1e7-81f248ea0e59"))
+AddBack;
+    // [ default ] interface IAddBack
+
+struct __declspec(uuid("127f8d51-b1db-49e9-9f56-d06a0ee0c500"))
+IAddBack : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Add ( );
+    HRESULT AddTen ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Add ( ) = 0;
+    virtual HRESULT __stdcall raw_AddTen ( ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "AddBack.tli"
+
+#pragma pack(pop)

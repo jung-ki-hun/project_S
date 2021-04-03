@@ -1,0 +1,58 @@
+// AddBack.idl : IDL source for AddBack.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AddBack.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(E3F3CF64-923C-4414-8A1D-B0C322F3010B),
+		dual,
+		helpstring("IAddBack Interface"),
+		pointer_default(unique)
+	]
+	interface IAddBack : IDispatch
+	{
+		[id(1), helpstring("method Add")] HRESULT Add();
+		[id(2), helpstring("method AddTen")] HRESULT AddTen();
+	};
+
+	[
+		object,
+		uuid(9C40083F-1D1C-4403-95BB-94C73055357E),
+		dual,
+		helpstring("IAddEnd Interface"),
+		pointer_default(unique)
+	]
+	interface IAddEnd : IDispatch
+	{
+
+		[id(1), helpstring("method Clear")] HRESULT Clear();
+		[propget, id(2), helpstring("property AddEnd")] HRESULT AddEnd([out, retval] short *pVal);
+		[propput, id(2), helpstring("property AddEnd")] HRESULT AddEnd([in] short newVal);
+		[propget, id(3), helpstring("property Sum")] HRESULT Sum([out, retval] short *pVal);
+		[propput, id(3), helpstring("property Sum")] HRESULT Sum([in] short newVal);
+	};
+
+[
+	uuid(AFF61B1F-F86E-462D-BB59-EBC02BA0769A),
+	version(1.0),
+	helpstring("AddBack 1.0 Type Library")
+]
+library ADDBACKLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(CCB972C9-C400-4ECB-812C-FBC7BAFD4927),
+		helpstring("AddBack Class")
+	]
+	coclass AddBack
+	{
+		[default] interface IAddBack;
+		interface IAddEnd;
+	};
+};

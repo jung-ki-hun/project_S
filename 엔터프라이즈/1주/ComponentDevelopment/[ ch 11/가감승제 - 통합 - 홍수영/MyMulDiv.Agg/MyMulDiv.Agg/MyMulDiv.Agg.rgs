@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'MyMulDivAgg'
+		'MyMulDiv.Agg.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

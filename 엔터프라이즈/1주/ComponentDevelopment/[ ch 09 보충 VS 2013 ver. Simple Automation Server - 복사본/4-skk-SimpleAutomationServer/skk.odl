@@ -1,0 +1,44 @@
+// skk.odl : type library source for skk.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (skk.tlb).
+
+[ uuid(3CBE033E-AF74-499C-9B02-72E247D42AFE), version(1.0) ]
+library Skk
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CSkkDoc
+	
+	[ uuid(F5CB0012-87CF-4702-8D93-ABF3FC98B728) ]
+	dispinterface ISkk
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CSkkDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CSkkDoc)
+			[id(1)] void ShowApplication();
+			[id(2)] void ShapeChange();
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CSkkDoc
+	
+	[ uuid(6943F97B-ED83-4D02-B970-437BAC74B025) ]
+	coclass Document
+	{
+		[default] dispinterface ISkk;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

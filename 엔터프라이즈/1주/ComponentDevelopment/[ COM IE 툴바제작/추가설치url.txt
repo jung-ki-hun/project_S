@@ -1,0 +1,46 @@
+따라하기 원본사이트
+  http://www.codeproject.com/Articles/1323/Internet-Explorer-Toolbar-Deskband-Tutorial
+
+
+
+RBDeskband and CWindowImpl ATL 사전 설치 항목들
+
+1) 
+CWindowImpl 
+http://dgluna.tistory.com/40
+
+RBCWindowImpl_src.zip  파일 다운 & install
+
+-----------------------------------------------------------------------------------------------------
+2)
+RBDeskband 
+http://www.codeproject.com/Articles/478/Creating-DeskBands-with-an-ATL-Object-Wizard
+
+"C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Template\ATL" 폴더에 압축 해제하고 다음과 같이 설치한다.
+ > RegSvr32 RBDeskBand
+
+source 상 추가
+1)
+ DECLARE_WND_SUPERCLASS(TEXT("EYFOOLTOOLBAR"), TOOLBARCLASSNAME)
+2)
+ #pragma comment(lib,"comctl32.lib")
+
+
+Error가 5개 난다.
+
+- resource.h 추가
+#define IDM_GETQUOTE                      202
+
+- MFToolBar.cpp 상단에 직접 선언
+(원래는 stdafx.h 의 상단에서 #define _WIN32_WINNT 0x500 로 바꾸면 되어야하는데...(from 400에서))
+
+#define TBSTYLE_EX_MIXEDBUTTONS             0x00000008
+#define BTNS_BUTTON     TBSTYLE_BUTTON      // 0x0000
+#define BTNS_AUTOSIZE   TBSTYLE_AUTOSIZE 
+#define BTNS_SHOWTEXT   0x0040
+
+---------------------------------------------------------------
+
+- IE를 실행시키면 보기메뉴의 도구모음에 stockbar class로 나온다.
+- void CMFToolBar::GetQuote()에 내부 동작 정의  -- 조작해서 naver toolbar처럼 동작하도록 만들어둠(skkToolBar)
+- Win XP 기계에서 test 함

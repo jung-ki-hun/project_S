@@ -1,0 +1,6 @@
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\bin\x86\Debug\ClassLibrary1.dll
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\bin\x86\Debug\ClassLibrary1.pdb
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\bin\x86\Debug\ClassLibrary1.tlb
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\obj\x86\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\obj\x86\Debug\ClassLibrary1.dll
+E:\과제\엔터프라이즈_기말\20143114금동훈_DCOM_C#WCF서버_제작_및_클라이언트_COM객체_등록_C++콘솔에서_WCF서버와_통신하기\ClassLibrary1\ClassLibrary1\obj\x86\Debug\ClassLibrary1.pdb

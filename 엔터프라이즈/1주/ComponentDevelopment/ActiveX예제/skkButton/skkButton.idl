@@ -1,0 +1,61 @@
+// skkButton.idl : IDL source for skkButton.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (skkButton.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(1D02E8FF-62F9-48C8-B989-1332CFDAC795),
+		dual,
+		helpstring("ISkkButton Interface"),
+		pointer_default(unique)
+	]
+	interface ISkkButton : IDispatch
+	{
+		[propput, id(DISPID_FILLCOLOR)]
+		HRESULT FillColor([in]OLE_COLOR clr);
+		[propget, id(DISPID_FILLCOLOR)]
+		HRESULT FillColor([out, retval]OLE_COLOR* pclr);
+		[propget, id(1), helpstring("property TopLeft")] HRESULT TopLeft([out, retval] OLE_COLOR *pVal);
+		[propput, id(1), helpstring("property TopLeft")] HRESULT TopLeft([in] OLE_COLOR newVal);
+		[propget, id(2), helpstring("property BottomRight")] HRESULT BottomRight([out, retval] OLE_COLOR *pVal);
+		[propput, id(2), helpstring("property BottomRight")] HRESULT BottomRight([in] OLE_COLOR newVal);
+	};
+
+[
+	uuid(998C2711-2151-4E00-A053-0E95BE048EA9),
+	version(1.0),
+	helpstring("skkButton 1.0 Type Library")
+]
+library SKKBUTTONLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(B2E4CC25-8BF2-4E43-9B18-4D0FADD0135A),
+		helpstring("_ISkkButtonEvents Interface")
+	]
+	dispinterface _ISkkButtonEvents
+	{
+		properties:
+		methods:
+			[id(1)] void Clicked([in]long x, [in] long y);
+	};
+
+	[
+		uuid(848B3494-E54D-41B7-AD20-389B56014A46),
+		helpstring("SkkButton Class")
+	]
+	coclass SkkButton
+	{
+		[default] interface ISkkButton;
+		[default, source] dispinterface _ISkkButtonEvents;
+	};
+};

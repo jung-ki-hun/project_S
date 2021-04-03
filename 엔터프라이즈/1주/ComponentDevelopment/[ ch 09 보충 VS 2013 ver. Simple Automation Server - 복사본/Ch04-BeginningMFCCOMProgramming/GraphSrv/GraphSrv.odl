@@ -1,0 +1,41 @@
+// GraphSrv.odl : type library source for GraphSrv.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (GraphSrv.tlb).
+
+[ uuid(DA328812-027C-11D1-9257-00201834E2A3), version(1.0) ]
+library GraphSrv
+{
+	importlib("stdole32.tlb");
+	
+
+	//  Primary dispatch interface for CGraphSrvDoc
+	
+	[ uuid(DA328813-027C-11D1-9257-00201834E2A3) ]
+	dispinterface IGraphSrv
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CGraphSrvDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CGraphSrvDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CGraphSrvDoc
+	
+	[ uuid(9A1C8724-96CC-11D0-9257-00201834E2A3) ]
+	coclass Document
+	{
+		[default] dispinterface IGraphSrv;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

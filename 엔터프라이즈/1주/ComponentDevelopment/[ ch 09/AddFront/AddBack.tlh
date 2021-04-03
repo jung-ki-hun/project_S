@@ -1,0 +1,80 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (a01bc251).
+//
+// AddBack.tlh
+//
+// C++ source equivalent of Win32 type library AddBack.tlb
+// compiler-generated file created 05/15/06 at 19:43:51 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct /* coclass */ AddBack;
+struct __declspec(uuid("0b39a1ad-ecad-11d3-8255-0000c0b11065"))
+/* dual interface */ IAddBack;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAddBack, __uuidof(IAddBack));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("0b39a1ae-ecad-11d3-8255-0000c0b11065"))
+AddBack;
+    // [ default ] interface IAddBack
+
+struct __declspec(uuid("0b39a1ad-ecad-11d3-8255-0000c0b11065"))
+IAddBack : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAddEnd,put=PutAddEnd))
+    short AddEnd;
+    __declspec(property(get=GetSum))
+    short Sum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Add ( );
+    HRESULT AddTen ( );
+    HRESULT Clear ( );
+    short GetAddEnd ( );
+    void PutAddEnd (
+        short pVal );
+    short GetSum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Add ( ) = 0;
+    virtual HRESULT __stdcall raw_AddTen ( ) = 0;
+    virtual HRESULT __stdcall raw_Clear ( ) = 0;
+    virtual HRESULT __stdcall get_AddEnd (
+        short * pVal ) = 0;
+    virtual HRESULT __stdcall put_AddEnd (
+        short pVal ) = 0;
+    virtual HRESULT __stdcall get_Sum (
+        short * pVal ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "AddBack.tli"
+
+#pragma pack(pop)

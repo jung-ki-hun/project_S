@@ -1,0 +1,111 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (4bca3662).
+//
+// RemOutServer.tlh
+//
+// C++ source equivalent of Win32 type library ..\RemOutServer\RemOutServer.tlb
+// compiler-generated file created 07/09/06 at 22:25:33 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct /* coclass */ RemOutServer;
+struct __declspec(uuid("b86bf92e-cf3c-11d1-94f0-0020af715af0"))
+/* dual interface */ IAddEnd;
+struct __declspec(uuid("b86bf92f-cf3c-11d1-94f0-0020af715af0"))
+/* dual interface */ IAdd;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAddEnd, __uuidof(IAddEnd));
+_COM_SMARTPTR_TYPEDEF(IAdd, __uuidof(IAdd));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("b86bf930-cf3c-11d1-94f0-0020af715af0"))
+RemOutServer;
+    // [ default ] interface IAddEnd
+    // interface IAdd
+
+struct __declspec(uuid("b86bf92e-cf3c-11d1-94f0-0020af715af0"))
+IAddEnd : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAddEnd,put=PutAddEnd))
+    short AddEnd;
+    __declspec(property(get=GetSum))
+    short Sum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    short GetAddEnd ( );
+    void PutAddEnd (
+        short pVal );
+    short GetSum ( );
+    HRESULT Clear ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_AddEnd (
+        short * pVal ) = 0;
+    virtual HRESULT __stdcall put_AddEnd (
+        short pVal ) = 0;
+    virtual HRESULT __stdcall get_Sum (
+        short * pVal ) = 0;
+    virtual HRESULT __stdcall raw_Clear ( ) = 0;
+};
+
+struct __declspec(uuid("b86bf92f-cf3c-11d1-94f0-0020af715af0"))
+IAdd : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Add ( );
+    HRESULT AddTen ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Add ( ) = 0;
+    virtual HRESULT __stdcall raw_AddTen ( ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_REMOUTSERVERLib =
+    {0xb86bf921,0xcf3c,0x11d1,{0x94,0xf0,0x00,0x20,0xaf,0x71,0x5a,0xf0}};
+extern "C" const GUID __declspec(selectany) CLSID_RemOutServer =
+    {0xb86bf930,0xcf3c,0x11d1,{0x94,0xf0,0x00,0x20,0xaf,0x71,0x5a,0xf0}};
+extern "C" const GUID __declspec(selectany) IID_IAddEnd =
+    {0xb86bf92e,0xcf3c,0x11d1,{0x94,0xf0,0x00,0x20,0xaf,0x71,0x5a,0xf0}};
+extern "C" const GUID __declspec(selectany) IID_IAdd =
+    {0xb86bf92f,0xcf3c,0x11d1,{0x94,0xf0,0x00,0x20,0xaf,0x71,0x5a,0xf0}};
+
+//
+// Wrapper method implementations
+//
+
+#include "RemOutServer.tli"
+
+#pragma pack(pop)

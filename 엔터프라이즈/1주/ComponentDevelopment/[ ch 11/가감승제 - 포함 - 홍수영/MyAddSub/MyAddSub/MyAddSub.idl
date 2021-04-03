@@ -1,0 +1,38 @@
+// MyAddSub.idl : MyAddSub의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(MyAddSub.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(E32D89CF-0450-4CAF-8ECB-1D2048C6B0C8),
+	dual,
+	nonextensible,
+	helpstring("IMyAddSub 인터페이스"),
+	pointer_default(unique)
+]
+interface IMyAddSub : IDispatch{
+    [id(1), helpstring("메서드 Add")] HRESULT Add([in] short val1, [in] short val2, [out] short * result);
+    [id(2), helpstring("메서드 Sub")] HRESULT Sub([in] short val1, [in] short val2, [out] short * result);
+};
+[
+	uuid(5B070D20-1613-4081-A859-1546FCC32341),
+	version(1.0),
+	helpstring("MyAddSub 1.0 형식 라이브러리")
+]
+library MyAddSubLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(A3778159-0969-4D60-8934-9FCF9E265BDA),
+		helpstring("MyAddSub Class")
+	]
+	coclass MyAddSub
+	{
+		[default] interface IMyAddSub;
+	};
+};

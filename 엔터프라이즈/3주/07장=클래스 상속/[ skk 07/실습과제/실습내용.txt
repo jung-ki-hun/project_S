@@ -1,0 +1,19 @@
+- Book class의 모든 필드는 property로 접근
+
+
+- // has a
+
+class Lib{
+    Book[] books;
+    int count;
+    public Lib(){
+        books = new Book[10];
+
+
+        books[0] = new Book("The C Programming", 2000, "Prentice Hall", "Ritchie");
+        books[1] = new Book("C++ Primer", 2500, "Addison Wesley", "Lippman");
+        books[2] = new Book("C# & .Net Platform", 3000, "Apress", "Troelsen");
+
+        count = 3;
+    }
+	........

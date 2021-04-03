@@ -1,0 +1,32 @@
+HKCR
+{
+    NoRemove AppID
+    {
+		ForceRemove {B86BF941-CF3C-11D1-94F0-0020AF715AF0} = s 'RemInServer Class'
+        {
+            val DllSurrogate = s ''
+            val RemoteServerName = s 'Ntserver'
+        }
+    }
+	RemInServer.RemInServer.1 = s 'RemInServer Class'
+	{
+		CLSID = s '{B86BF941-CF3C-11D1-94F0-0020AF715AF0}'
+	}
+	RemInServer.RemInServer = s 'RemInServer Class'
+	{
+		CLSID = s '{B86BF941-CF3C-11D1-94F0-0020AF715AF0}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B86BF941-CF3C-11D1-94F0-0020AF715AF0} = s 'RemInServer Class'
+		{
+			ProgID = s 'RemInServer.RemInServer.1'
+			VersionIndependentProgID = s 'RemInServer.RemInServer'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+            val AppID = s '{B86BF941-CF3C-11D1-94F0-0020AF715AF0}'
+		}
+	}
+}

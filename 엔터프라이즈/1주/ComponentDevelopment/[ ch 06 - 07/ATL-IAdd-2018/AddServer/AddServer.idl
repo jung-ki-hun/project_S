@@ -1,0 +1,33 @@
+// AddServer.idl : AddServer의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(AddServer.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(63156710-D235-4BB4-8971-3E2870D3B4FE),
+	pointer_default(unique)
+]
+interface IAdd : IUnknown{
+	[] HRESULT Add([in] int a, [in] int b, [out, retval] int* c);
+};
+[
+	uuid(88987342-71EF-4CBC-AD4C-73975D1D833E),
+	version(1.0),
+]
+library AddServerLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(33D61ACF-7482-48A3-97F2-FD8502A817D3)		
+	]
+	coclass Add
+	{
+		[default] interface IAdd;
+	};
+};
+

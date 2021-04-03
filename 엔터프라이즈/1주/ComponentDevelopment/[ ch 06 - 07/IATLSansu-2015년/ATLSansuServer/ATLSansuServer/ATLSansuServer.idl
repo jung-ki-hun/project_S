@@ -1,0 +1,35 @@
+// ATLSansuServer.idl : ATLSansuServer의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(ATLSansuServer.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(AE0B93A3-6C06-4FFB-9B0B-EEF932E26F9B),
+	helpstring("IATLSansu 인터페이스"),
+	pointer_default(unique)
+]
+interface IATLSansu : IUnknown{
+	[helpstring("메서드 SansuAdd")] HRESULT SansuAdd([in] int a, [in] int b, [out] int* c);
+};
+[
+	uuid(716D4C73-70E1-4B4C-9554-8D8776686F6D),
+	version(1.0),
+	helpstring("ATLSansuServer 1.0 형식 라이브러리")
+]
+library ATLSansuServerLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(B421DCB2-9201-4675-ABC7-E276D6D043CC),
+		helpstring("ATLSansu Class")
+	]
+	coclass ATLSansu
+	{
+		[default] interface IATLSansu;
+	};
+};

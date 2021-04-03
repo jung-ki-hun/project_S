@@ -1,0 +1,58 @@
+// AddBackATL.idl : IDL source for AddBackATL.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AddBackATL.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(2734EA17-38EA-4E54-A09E-AA11CE9B1D64),
+		dual,
+		helpstring("IAddBackATL Interface"),
+		pointer_default(unique)
+	]
+	interface IAddBackATL : IDispatch
+	{
+		[id(1), helpstring("method Clear")] HRESULT Clear();
+		[id(2), helpstring("method Add")] HRESULT Add();
+		[id(3), helpstring("method AddTen")] HRESULT AddTen();
+		[propget, id(4), helpstring("property AddEnd")] HRESULT AddEnd([out, retval] short *pVal);
+		[propput, id(4), helpstring("property AddEnd")] HRESULT AddEnd([in] short newVal);
+		[propget, id(5), helpstring("property Sum")] HRESULT Sum([out, retval] short *pVal);
+	};
+
+[
+	uuid(9E8142B7-F42F-4BEB-984F-58A0EA707D21),
+	version(1.0),
+	helpstring("AddBackATL 1.0 Type Library")
+]
+library ADDBACKATLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(01D60ED5-D6FB-4E7F-B176-6FAF65D89677),
+		helpstring("_IAddBackATLEvents Interface")
+	]
+	dispinterface _IAddBackATLEvents
+	{
+		properties:
+		methods:
+	};
+
+	[
+		uuid(6D8D50AD-AD3D-4670-A25F-9E3E6E11680F),
+		helpstring("AddBackATL Class")
+	]
+	coclass AddBackATL
+	{
+		[default] interface IAddBackATL;
+		[default, source] dispinterface _IAddBackATLEvents;
+	};
+};

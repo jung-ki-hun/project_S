@@ -1,0 +1,10 @@
+[
+	object,
+	uuid(A634FE78-81E1-4e6f-B1B8-AEC9FB632E3A)
+]
+interface ISansu : IUnknown
+{
+	import "unknwn.idl";
+
+	HRESULT Add([in]int a, [in]int b, [out, retval]int *c);
+};

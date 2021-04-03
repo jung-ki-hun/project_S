@@ -1,0 +1,13 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+
+HKEY_CLASSES_ROOT\SkkClient.Application = SkkClient Application
+HKEY_CLASSES_ROOT\SkkClient.Application\CLSID = {2294EE58-38B5-4F46-AA79-C3C2700BE21C}
+
+HKEY_CLASSES_ROOT\CLSID\{2294EE58-38B5-4F46-AA79-C3C2700BE21C} = SkkClient Application
+HKEY_CLASSES_ROOT\CLSID\{2294EE58-38B5-4F46-AA79-C3C2700BE21C}\ProgId = SkkClient.Application
+HKEY_CLASSES_ROOT\CLSID\{2294EE58-38B5-4F46-AA79-C3C2700BE21C}\LocalServer32 = SKKCLIENT.EXE

@@ -1,0 +1,10 @@
+public class ShapeImpl implements Shape
+{
+	public void draw(){
+		System.out.println("painting.......");
+	}
+}
+
+// ShapeImpl.java:1: ShapeImpl should be declared abstract; it does not define drawTri() in ShapeImpl
+// ShapeImpl.java:1: ShapeImpl should be declared abstract; it does not define drawCircle in ShapeImpl
+// ShapeImpl.java:1: ShapeImpl should be declared abstract; it does not define drawRect() in ShapeImpl

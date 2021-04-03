@@ -1,0 +1,6 @@
+C:\Users\07\Desktop\JsjPrj\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\07\Desktop\JsjPrj\bin\Debug\JsjPrj.dll
+C:\Users\07\Desktop\JsjPrj\bin\Debug\JsjPrj.pdb
+C:\Users\07\Desktop\JsjPrj\obj\Debug\JsjPrj.dll
+C:\Users\07\Desktop\JsjPrj\obj\Debug\JsjPrj.pdb
+C:\Users\07\Desktop\JsjPrj\bin\Debug\JsjPrj.tlb

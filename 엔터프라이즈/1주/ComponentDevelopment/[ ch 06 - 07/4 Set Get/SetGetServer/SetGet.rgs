@@ -1,0 +1,23 @@
+HKCR
+{
+	SetGetServer.SetGet.1 = s 'SetGet Class'
+	{
+		CLSID = s '{457B1293-605C-4616-B4B5-985AA1E3CD2E}'
+	}
+	SetGetServer.SetGet = s 'SetGet Class'
+	{
+		CLSID = s '{457B1293-605C-4616-B4B5-985AA1E3CD2E}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {457B1293-605C-4616-B4B5-985AA1E3CD2E} = s 'SetGet Class'
+		{
+			ProgID = s 'SetGetServer.SetGet.1'
+			VersionIndependentProgID = s 'SetGetServer.SetGet'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

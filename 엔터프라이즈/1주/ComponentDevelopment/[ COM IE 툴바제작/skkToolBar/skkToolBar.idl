@@ -1,0 +1,40 @@
+// skkToolBar.idl : IDL source for skkToolBar.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (skkToolBar.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+	[
+		object,
+		uuid(0F090CFD-68C6-4340-BCD2-ED3C120B8BEA),
+		dual,
+		helpstring("IStockBar Interface"),
+		pointer_default(unique)
+	]
+	interface IStockBar : IDispatch
+	{
+	};
+
+[
+	uuid(608545D7-C79A-4F5C-A0CC-9F5E7AE2BD1C),
+	version(1.0),
+	helpstring("skkToolBar 1.0 Type Library")
+]
+library SKKTOOLBARLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	[
+		uuid(E4ADBB2B-731E-4E30-A0D1-A1DA002C2A84),
+		helpstring("StockBar Class")
+	]
+	coclass StockBar
+	{
+		[default] interface IStockBar;
+	};
+};

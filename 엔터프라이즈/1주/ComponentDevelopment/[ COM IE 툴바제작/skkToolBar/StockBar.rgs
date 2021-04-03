@@ -1,0 +1,52 @@
+HKCR
+{
+	SkkToolBar.StockBar.1 = s 'StockBar Class'
+	{
+		CLSID = s '{E4ADBB2B-731E-4E30-A0D1-A1DA002C2A84}'
+	}
+	SkkToolBar.StockBar = s 'StockBar Class'
+	{
+		CLSID = s '{E4ADBB2B-731E-4E30-A0D1-A1DA002C2A84}'
+		CurVer = s 'SkkToolBar.StockBar.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E4ADBB2B-731E-4E30-A0D1-A1DA002C2A84} = s 'StockBar Class'
+		{
+			ProgID = s 'SkkToolBar.StockBar.1'
+			VersionIndependentProgID = s 'SkkToolBar.StockBar'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{608545D7-C79A-4F5C-A0CC-9F5E7AE2BD1C}'
+		}
+	}
+}
+HKLM
+{
+   Software
+   {
+      Microsoft
+      {
+         'Internet Explorer'
+         {
+            Extensions
+            {
+               ForceRemove	{A26ABCF0-1C8F-46e7-A67C-0489DC21B9CC} = s 'The Motley Fool Quotes'
+               {
+                  val BandClsid = s '{A6790AA5-C6C7-4BCF-A46D-0FDAC4EA90EB}'
+                  val ButtonText = s 'The Motley Fool'
+                  val Clsid = s '{E0DD6CAB-2D10-11D2-8F1A-0000F87ABD16}'
+                  val 'Default Visible' = s 'Yes'
+                  val 'Hot Icon' = s '%MODULE%,425'
+                  val Icon = s '%MODULE%,425'
+                  val MenuStatusBar = s 'The Motley Fool Stock Quote Toolbar'
+                  val MenuText = s 'The Motley Fool'
+               }
+            }
+         }
+      }
+   }
+}
